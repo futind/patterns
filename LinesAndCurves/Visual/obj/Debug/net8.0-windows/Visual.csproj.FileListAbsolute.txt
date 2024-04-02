@@ -1,0 +1,15 @@
+C:\Users\frostled\source\LinesAndCurves\Visual\bin\Debug\net8.0-windows\Visual.deps.json
+C:\Users\frostled\source\LinesAndCurves\Visual\bin\Debug\net8.0-windows\Visual.dll
+C:\Users\frostled\source\LinesAndCurves\Visual\bin\Debug\net8.0-windows\Visual.pdb
+C:\Users\frostled\source\LinesAndCurves\Visual\bin\Debug\net8.0-windows\Geometry.dll
+C:\Users\frostled\source\LinesAndCurves\Visual\bin\Debug\net8.0-windows\Geometry.pdb
+C:\Users\frostled\source\LinesAndCurves\Visual\obj\Debug\net8.0-windows\Visual.csproj.AssemblyReference.cache
+C:\Users\frostled\source\LinesAndCurves\Visual\obj\Debug\net8.0-windows\Visual.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\frostled\source\LinesAndCurves\Visual\obj\Debug\net8.0-windows\Visual.AssemblyInfoInputs.cache
+C:\Users\frostled\source\LinesAndCurves\Visual\obj\Debug\net8.0-windows\Visual.AssemblyInfo.cs
+C:\Users\frostled\source\LinesAndCurves\Visual\obj\Debug\net8.0-windows\Visual.csproj.CoreCompileInputs.cache
+C:\Users\frostled\source\LinesAndCurves\Visual\obj\Debug\net8.0-windows\Visual.csproj.Up2Date
+C:\Users\frostled\source\LinesAndCurves\Visual\obj\Debug\net8.0-windows\Visual.dll
+C:\Users\frostled\source\LinesAndCurves\Visual\obj\Debug\net8.0-windows\refint\Visual.dll
+C:\Users\frostled\source\LinesAndCurves\Visual\obj\Debug\net8.0-windows\Visual.pdb
+C:\Users\frostled\source\LinesAndCurves\Visual\obj\Debug\net8.0-windows\ref\Visual.dll
