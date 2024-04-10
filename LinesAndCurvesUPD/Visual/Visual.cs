@@ -24,7 +24,7 @@ namespace Visual
             IPoint S = new Geometry.Point();
             S = C.GetPoint(0);
             IPoint E = new Geometry.Point();
-            E = C.GetPoint(-1);
+            E = C.GetPoint(1);
 
             int xmult = 1;
             int ymult = 1;
@@ -32,7 +32,7 @@ namespace Visual
             if (E.getY() > S.getY()) ymult = -1;
 
             DrawPoint(S);
-            DrawPoint(E);
+            DrawPoint(C.GetPoint(-1));
 
             IPoint A = new Geometry.Point();
             IPoint B = new Geometry.Point();
@@ -42,39 +42,40 @@ namespace Visual
             {
                 A = C.GetPoint(i / (double)n);
                 B = C.GetPoint((i + 1) / (double)n);
+                E = B;
 
                 double ax = 0, ay = 0;
                 double bx = 0, by = 0;
 
-                // x > s, y < s
                 if (E.getX() > S.getX() && E.getY() <= S.getY())
-                {
-                    ax = S.getX() - Math.Abs(S.getX() - A.getX());
-                    ay = S.getY() + Math.Abs(S.getY() - A.getY());
-                    bx = S.getX() - Math.Abs(S.getX() - B.getX());
-                    by = S.getY() + Math.Abs(S.getY() - B.getY());
-                }
-                else if (E.getX() <= S.getX() && E.getY() <= E.getY())
-                {
-                    ax = S.getX() + Math.Abs(S.getX() - A.getX());
-                    ay = S.getY() + Math.Abs(S.getY() - A.getY());
-                    bx = S.getX() + Math.Abs(S.getX() - B.getX());
-                    by = S.getY() + Math.Abs(S.getY() - B.getY());
-                }
-                else if (E.getX() > S.getX() && E.getY() > E.getY())
-                {
-                    ax = S.getX() - Math.Abs(S.getX() - A.getX());
-                    ay = S.getY() - Math.Abs(S.getY() - A.getY());
-                    bx = S.getX() - Math.Abs(S.getX() - B.getX());
-                    by = S.getY() - Math.Abs(S.getY() - B.getY());
-                }
-                else if (E.getX() <= S.getX() && E.getY() > E.getY())
-                {
-                    ax = S.getX() + Math.Abs(S.getX() - A.getX());
-                    ay = S.getY() - Math.Abs(S.getY() - A.getY());
-                    bx = S.getX() + Math.Abs(S.getX() - B.getX());
-                    by = S.getY() - Math.Abs(S.getY() - B.getY());
-                }
+                    {
+                        ax = S.getX() - Math.Abs(S.getX() - A.getX());
+                        ay = S.getY() + Math.Abs(S.getY() - A.getY());
+                        bx = S.getX() - Math.Abs(S.getX() - B.getX());
+                        by = S.getY() + Math.Abs(S.getY() - B.getY());
+                    }
+                    else if (E.getX() <= S.getX() && E.getY() <= S.getY())
+                    {
+                        ax = S.getX() + Math.Abs(S.getX() - A.getX());
+                        ay = S.getY() + Math.Abs(S.getY() - A.getY());
+                        bx = S.getX() + Math.Abs(S.getX() - B.getX());
+                        by = S.getY() + Math.Abs(S.getY() - B.getY());
+                    }
+                    else if (E.getX() > S.getX() && E.getY() > S.getY())
+                    {
+                        ax = S.getX() - Math.Abs(S.getX() - A.getX());
+                        ay = S.getY() - Math.Abs(S.getY() - A.getY());
+                        bx = S.getX() - Math.Abs(S.getX() - B.getX());
+                        by = S.getY() - Math.Abs(S.getY() - B.getY());
+                    }
+                    else if (E.getX() <= S.getX() && E.getY() > S.getY())
+                    {
+                        ax = S.getX() + Math.Abs(S.getX() - A.getX());
+                        ay = S.getY() - Math.Abs(S.getY() - A.getY());
+                        bx = S.getX() + Math.Abs(S.getX() - B.getX());
+                        by = S.getY() - Math.Abs(S.getY() - B.getY());
+                    }
+
                 A.setX(ax);
                 A.setY(ay);
 

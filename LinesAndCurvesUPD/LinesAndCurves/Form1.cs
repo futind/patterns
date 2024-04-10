@@ -57,10 +57,15 @@ namespace LinesAndCurves
             e.Graphics.DrawRectangle(Pens.Purple, 10, -10, 5, 5);
 
             Random rnd = new Random();
-            IPoint a = new Geometry.Point((float) rnd.Next(0, 800), (float) rnd.Next(0, 400));
-            IPoint b = new Geometry.Point((float) rnd.Next(0, 800), (float) rnd.Next(0, 400));
-            IPoint c = new Geometry.Point((float) rnd.Next(0, 800), (float) rnd.Next(0, 400));
-            IPoint d = new Geometry.Point((float) rnd.Next(0, 800), (float) rnd.Next(0, 400));
+            IPoint a = new Geometry.Point((float)rnd.Next(200, 500), (float)rnd.Next(100, 300));
+            IPoint b = new Geometry.Point((float)rnd.Next(200, 800), (float)rnd.Next(100, 300));
+            IPoint c = new Geometry.Point((float)rnd.Next(200, 800), (float)rnd.Next(100, 300));
+            IPoint d = new Geometry.Point((float)rnd.Next(200, 800), (float)rnd.Next(100, 300));
+
+            //IPoint a = new Geometry.Point(300, 200);
+            //IPoint b = new Geometry.Point(600, 50);
+            //IPoint c = new Geometry.Point(100, 100);
+            //IPoint d = new Geometry.Point(250, 250);
             VisualCurve L = new VisualCurve(new Line(a, b));
             VisualCurve B = new VisualCurve(new Bezier(a, b, c, d));
 
