@@ -18,7 +18,7 @@ namespace Visual
 
         public void Draw(Graphics g)
         {
-            int n = 1000;
+            int n = 10;
             IPoint a = GetPoint(0);
 
             for (int i = 1; i <= n; i++)

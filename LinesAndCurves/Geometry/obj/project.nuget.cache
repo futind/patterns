@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RWS6HIcJ64LpU0iRLJDuvXW0KHmbRjLZUd88JaorbuqarVKgCvp8ibEW254NUsZamvRbceHUBpI5chi7wtaYfA==",
+  "dgSpecHash": "ympTbb/bM5o3qjtOLM0mTMjZy0mFJMP4AS9OXO9UYhTN7vE5reVxpFCwsekwcVFH2VYePSZFfB0wGikyT32XCA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\frostled\\source\\LinesAndCurves\\Geometry\\Geometry.csproj",
+  "projectFilePath": "C:\\repos\\patterns\\LinesAndCurves\\Geometry\\Geometry.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

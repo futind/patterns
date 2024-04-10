@@ -28,8 +28,8 @@ namespace LinesAndCurves
             VisualCurve L = new VisualCurve(new Line(a, b));
             VisualCurve B = new VisualCurve(new Bezier(a, b, c, d));
 
-            IDrawer black = new BlackDrawer();
-            IDrawer green = new GreenDrawer();
+            IDrawer black = new BlackDrawer(e.Graphics);
+            IDrawer green = new GreenDrawer(e.Graphics);
 
             L.Draw(green);
             B.Draw(black);
@@ -58,8 +58,8 @@ namespace LinesAndCurves
             VisualCurve L = new VisualCurve(new Line(a, b));
             VisualCurve B = new VisualCurve(new Bezier(a, b, c, d));
 
-            IDrawer black = new BlackDrawer();
-            IDrawer green = new GreenDrawer();
+            IDrawer black = new BlackDrawer(e.Graphics);
+            IDrawer green = new GreenDrawer(e.Graphics);
 
             L.Draw(green);
             B.Draw(black);

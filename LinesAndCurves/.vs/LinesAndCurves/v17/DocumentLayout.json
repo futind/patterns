@@ -1,18 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\frostled\\source\\LinesAndCurves\\",
+  "WorkspaceRootPath": "C:\\repos\\patterns\\LinesAndCurves\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FF2EB60D-759F-4332-85BD-05290B581403}|LinesAndCurves\\LinesAndCurves.csproj|c:\\users\\frostled\\source\\linesandcurves\\linesandcurves\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A68CC0B0-C44A-4837-B967-3F1484E93D5F}|Visual\\Visual.csproj|C:\\repos\\patterns\\LinesAndCurves\\visual\\visual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A68CC0B0-C44A-4837-B967-3F1484E93D5F}|Visual\\Visual.csproj|solutionrelative:visual\\visual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF2EB60D-759F-4332-85BD-05290B581403}|LinesAndCurves\\LinesAndCurves.csproj|c:\\repos\\patterns\\linesandcurves\\linesandcurves\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF2EB60D-759F-4332-85BD-05290B581403}|LinesAndCurves\\LinesAndCurves.csproj|solutionrelative:linesandcurves\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDE2CDA3-3B74-4555-917D-ECDAED13C39D}|Geometry\\Geometry.csproj|c:\\users\\frostled\\source\\linesandcurves\\geometry\\geometry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDE2CDA3-3B74-4555-917D-ECDAED13C39D}|Geometry\\Geometry.csproj|solutionrelative:geometry\\geometry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF2EB60D-759F-4332-85BD-05290B581403}|LinesAndCurves\\LinesAndCurves.csproj|c:\\repos\\patterns\\linesandcurves\\linesandcurves\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF2EB60D-759F-4332-85BD-05290B581403}|LinesAndCurves\\LinesAndCurves.csproj|solutionrelative:linesandcurves\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A68CC0B0-C44A-4837-B967-3F1484E93D5F}|Visual\\Visual.csproj|c:\\users\\frostled\\source\\linesandcurves\\visual\\visual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A68CC0B0-C44A-4837-B967-3F1484E93D5F}|Visual\\Visual.csproj|solutionrelative:visual\\visual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FDE2CDA3-3B74-4555-917D-ECDAED13C39D}|Geometry\\Geometry.csproj|C:\\repos\\patterns\\LinesAndCurves\\geometry\\geometry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDE2CDA3-3B74-4555-917D-ECDAED13C39D}|Geometry\\Geometry.csproj|solutionrelative:geometry\\geometry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,15 +26,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\repos\\patterns\\LinesAndCurves\\LinesAndCurves\\Program.cs",
+              "RelativeDocumentMoniker": "LinesAndCurves\\Program.cs",
+              "ToolTip": "C:\\repos\\patterns\\LinesAndCurves\\LinesAndCurves\\Program.cs",
+              "RelativeToolTip": "LinesAndCurves\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T12:57:26.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\frostled\\source\\LinesAndCurves\\LinesAndCurves\\Form1.cs",
+              "DocumentMoniker": "C:\\repos\\patterns\\LinesAndCurves\\LinesAndCurves\\Form1.cs",
               "RelativeDocumentMoniker": "LinesAndCurves\\Form1.cs",
-              "ToolTip": "C:\\Users\\frostled\\source\\LinesAndCurves\\LinesAndCurves\\Form1.cs",
+              "ToolTip": "C:\\repos\\patterns\\LinesAndCurves\\LinesAndCurves\\Form1.cs",
               "RelativeToolTip": "LinesAndCurves\\Form1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -39,26 +56,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Geometry.cs",
-              "DocumentMoniker": "C:\\Users\\frostled\\source\\LinesAndCurves\\Geometry\\Geometry.cs",
+              "DocumentMoniker": "C:\\repos\\patterns\\LinesAndCurves\\Geometry\\Geometry.cs",
               "RelativeDocumentMoniker": "Geometry\\Geometry.cs",
-              "ToolTip": "C:\\Users\\frostled\\source\\LinesAndCurves\\Geometry\\Geometry.cs",
+              "ToolTip": "C:\\repos\\patterns\\LinesAndCurves\\Geometry\\Geometry.cs",
               "RelativeToolTip": "Geometry\\Geometry.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEoAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADoAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-02T16:52:38.357Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Visual.cs",
-              "DocumentMoniker": "C:\\Users\\frostled\\source\\LinesAndCurves\\Visual\\Visual.cs",
+              "DocumentMoniker": "C:\\repos\\patterns\\LinesAndCurves\\Visual\\Visual.cs",
               "RelativeDocumentMoniker": "Visual\\Visual.cs",
-              "ToolTip": "C:\\Users\\frostled\\source\\LinesAndCurves\\Visual\\Visual.cs",
+              "ToolTip": "C:\\repos\\patterns\\LinesAndCurves\\Visual\\Visual.cs",
               "RelativeToolTip": "Visual\\Visual.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAYAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-02T16:52:16.516Z",
               "EditorCaption": ""

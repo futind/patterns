@@ -9,3 +9,15 @@ C:\Users\frostled\source\LinesAndCurves\Geometry\obj\Debug\net8.0-windows\Geomet
 C:\Users\frostled\source\LinesAndCurves\Geometry\obj\Debug\net8.0-windows\refint\Geometry.dll
 C:\Users\frostled\source\LinesAndCurves\Geometry\obj\Debug\net8.0-windows\Geometry.pdb
 C:\Users\frostled\source\LinesAndCurves\Geometry\obj\Debug\net8.0-windows\ref\Geometry.dll
+C:\repos\patterns\LinesAndCurves\Geometry\bin\Debug\net8.0-windows\Geometry.deps.json
+C:\repos\patterns\LinesAndCurves\Geometry\bin\Debug\net8.0-windows\Geometry.dll
+C:\repos\patterns\LinesAndCurves\Geometry\bin\Debug\net8.0-windows\Geometry.pdb
+C:\repos\patterns\LinesAndCurves\Geometry\obj\Debug\net8.0-windows\Geometry.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos\patterns\LinesAndCurves\Geometry\obj\Debug\net8.0-windows\Geometry.AssemblyInfoInputs.cache
+C:\repos\patterns\LinesAndCurves\Geometry\obj\Debug\net8.0-windows\Geometry.AssemblyInfo.cs
+C:\repos\patterns\LinesAndCurves\Geometry\obj\Debug\net8.0-windows\Geometry.csproj.CoreCompileInputs.cache
+C:\repos\patterns\LinesAndCurves\Geometry\obj\Debug\net8.0-windows\Geometry.sourcelink.json
+C:\repos\patterns\LinesAndCurves\Geometry\obj\Debug\net8.0-windows\Geometry.dll
+C:\repos\patterns\LinesAndCurves\Geometry\obj\Debug\net8.0-windows\refint\Geometry.dll
+C:\repos\patterns\LinesAndCurves\Geometry\obj\Debug\net8.0-windows\Geometry.pdb
+C:\repos\patterns\LinesAndCurves\Geometry\obj\Debug\net8.0-windows\ref\Geometry.dll

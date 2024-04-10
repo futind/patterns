@@ -10,18 +10,30 @@ namespace Visual
         public void DrawFirstPoint(ICurve C);
         public void DrawLastPoint(ICurve C);
         public void DrawSegment(ICurve C, double t1, double t2);
+
+        protected Pen 
+    }
+
+    public class ChiralDrawer : IDrawer
+    {
+
+        public ChiralDrawer(IDrawer d) { 
+            this.g = d.
+            Pen
+        }
+
+        Pen customPen;
     }
 
     public class BlackDrawer : IDrawer
     {
+        Graphics g;
 
-        public BlackDrawer()
+        public BlackDrawer(Graphics g)
         {
             customPen = new Pen(Color.Black, 3);
             customPen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-
-            bmp = new Bitmap(800, 400);
-            g = Graphics.FromImage(bmp);
+            this.g = g;
         }
 
         public void DrawFirstPoint(ICurve C)
@@ -56,21 +68,19 @@ namespace Visual
             }
         }
 
-        private Graphics g;
-        private Bitmap bmp;
         private Pen customPen;
     }
 
 
     public class GreenDrawer : IDrawer
     {
-        public GreenDrawer()
+        Graphics g;
+        public GreenDrawer(Graphics g)
         {
             customPen = new Pen(Color.Green, 3);
             customPen.CustomEndCap = new System.Drawing.Drawing2D.AdjustableArrowCap(5, 5);
 
-            bmp = new Bitmap(800, 400);
-            g = Graphics.FromImage(bmp);
+            this.g = g;
         }
 
         public void DrawFirstPoint(ICurve C)
@@ -107,8 +117,6 @@ namespace Visual
         }
 
         private Pen customPen;
-        private Bitmap bmp;
-        private Graphics g;
     }
 
 
