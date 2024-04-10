@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "duHg/Og75S2LwSbSWnaAqW2zzLOXqgCbeNbehgXr8+HmNmBoJhMQLnnpM0oouswTQMyc3SK2jPYp/UZUQQjn9w==",
+  "dgSpecHash": "l+82DWuRrOsuzoBbWmEq7rr/FSTY0ad9mDGSGddN92dOIACpJJxJsVYW0p/Q0I2cee6J99EhGu0mQsQx5gdA3Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\frostled\\source\\LinesAndCurves\\Visual\\Visual.csproj",
+  "projectFilePath": "C:\\Users\\frostled\\Desktop\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\frostled\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
     "C:\\Users\\frostled\\.nuget\\packages\\system.drawing.common\\8.0.3\\system.drawing.common.8.0.3.nupkg.sha512"

@@ -21,18 +21,18 @@ namespace LinesAndCurves
 
         private void Main_Form_Paint(object sender, PaintEventArgs e)
         {
-            IPoint a = new Geometry.Point(Width / 2, Height / 2);
-            IPoint b = new Geometry.Point(last_clicked.getX(), last_clicked.getY());
-            IPoint c = new Geometry.Point(Width / 2, last_clicked.getY());
-            IPoint d = new Geometry.Point(last_clicked.getX(), Height / 2);
-            VisualCurve L = new VisualCurve(new Line(a, b));
-            VisualCurve B = new VisualCurve(new Bezier(a, b, c, d));
+            //IPoint a = new Geometry.Point(Width / 2, Height / 2);
+            //IPoint b = new Geometry.Point(last_clicked.getX(), last_clicked.getY());
+            //IPoint c = new Geometry.Point(Width / 2, last_clicked.getY());
+            //IPoint d = new Geometry.Point(last_clicked.getX(), Height / 2);
+            //VisualCurve L = new VisualCurve(new Line(a, b));
+            //VisualCurve B = new VisualCurve(new Bezier(a, b, c, d));
 
-            IDrawer black = new BlackDrawer();
-            IDrawer green = new GreenDrawer();
+            //IDrawer black = new BlackDrawer(e.Graphics);
+            //IDrawer green = new GreenDrawer(e.Graphics);
 
-            L.Draw(green);
-            B.Draw(black);
+            //L.Draw(green);
+            //B.Draw(black);
         }
 
         private IPoint last_clicked = null;
@@ -50,6 +50,12 @@ namespace LinesAndCurves
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+            e.Graphics.DrawRectangle(Pens.Red, 0, 0, 5, 5);
+            e.Graphics.DrawRectangle(Pens.Green, 10, 10, 5, 5);
+            e.Graphics.DrawRectangle(Pens.Blue, -10, -10, 5, 5);
+            e.Graphics.DrawRectangle(Pens.Yellow, -10, 10, 5, 5);
+            e.Graphics.DrawRectangle(Pens.Purple, 10, -10, 5, 5);
+
             Random rnd = new Random();
             IPoint a = new Geometry.Point((float) rnd.Next(0, 800), (float) rnd.Next(0, 400));
             IPoint b = new Geometry.Point((float) rnd.Next(0, 800), (float) rnd.Next(0, 400));
@@ -58,11 +64,15 @@ namespace LinesAndCurves
             VisualCurve L = new VisualCurve(new Line(a, b));
             VisualCurve B = new VisualCurve(new Bezier(a, b, c, d));
 
-            IDrawer black = new BlackDrawer();
-            IDrawer green = new GreenDrawer();
+            IDrawer black = new BlackDrawer(e.Graphics);
+            IDrawer green = new GreenDrawer(e.Graphics);
+            IDrawer chiralgreen = new ChiralDrawer(green);
+            IDrawer chiralblack = new ChiralDrawer(black);
 
             L.Draw(green);
+            L.Draw(chiralgreen);
             B.Draw(black);
+            B.Draw(chiralblack);
         }
 
         private void panel1_Click(object sender, EventArgs e)
