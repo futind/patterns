@@ -67,7 +67,7 @@
             tabControl1.Location = new Point(12, 51);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(820, 443);
+            tabControl1.Size = new Size(1043, 596);
             tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -76,7 +76,7 @@
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(812, 415);
+            tabPage1.Size = new Size(1035, 568);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@
             // 
             panel1.Location = new Point(6, 6);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 400);
+            panel1.Size = new Size(1029, 562);
             panel1.TabIndex = 0;
             panel1.Click += panel1_Click;
             panel1.Paint += panel1_Paint;
@@ -96,7 +96,7 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(812, 415);
+            tabPage2.Size = new Size(1035, 568);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "tabPage2";
             tabPage2.UseVisualStyleBackColor = true;
@@ -112,7 +112,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(843, 496);
+            ClientSize = new Size(1079, 697);
             Controls.Add(tabControl1);
             Controls.Add(Save_button);
             Controls.Add(Generate_button);

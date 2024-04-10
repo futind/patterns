@@ -1,29 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\frostled\\Desktop\\patterns\\LinesAndCurvesUPD\\",
+  "WorkspaceRootPath": "C:\\repos\\patterns\\LinesAndCurvesUPD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FDE2CDA3-3B74-4555-917D-ECDAED13C39D}|Geometry\\Geometry.csproj|C:\\Users\\frostled\\Desktop\\patterns\\LinesAndCurvesUPD\\geometry\\geometry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDE2CDA3-3B74-4555-917D-ECDAED13C39D}|Geometry\\Geometry.csproj|solutionrelative:geometry\\geometry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF2EB60D-759F-4332-85BD-05290B581403}|LinesAndCurves\\LinesAndCurves.csproj|C:\\Users\\frostled\\Desktop\\patterns\\LinesAndCurvesUPD\\linesandcurves\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF2EB60D-759F-4332-85BD-05290B581403}|LinesAndCurves\\LinesAndCurves.csproj|solutionrelative:linesandcurves\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF2EB60D-759F-4332-85BD-05290B581403}|LinesAndCurves\\LinesAndCurves.csproj|C:\\Users\\frostled\\Desktop\\patterns\\LinesAndCurvesUPD\\linesandcurves\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF2EB60D-759F-4332-85BD-05290B581403}|LinesAndCurves\\LinesAndCurves.csproj|solutionrelative:linesandcurves\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A68CC0B0-C44A-4837-B967-3F1484E93D5F}|Visual\\Visual.csproj|C:\\Users\\frostled\\Desktop\\patterns\\LinesAndCurvesUPD\\visual\\visual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A68CC0B0-C44A-4837-B967-3F1484E93D5F}|Visual\\Visual.csproj|c:\\repos\\patterns\\linesandcurvesupd\\visual\\visual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A68CC0B0-C44A-4837-B967-3F1484E93D5F}|Visual\\Visual.csproj|solutionrelative:visual\\visual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF2EB60D-759F-4332-85BD-05290B581403}|LinesAndCurves\\LinesAndCurves.csproj|c:\\users\\frostled\\desktop\\patterns\\linesandcurvesupd\\linesandcurves\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FF2EB60D-759F-4332-85BD-05290B581403}|LinesAndCurves\\LinesAndCurves.csproj|C:\\repos\\patterns\\LinesAndCurvesUPD\\linesandcurves\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF2EB60D-759F-4332-85BD-05290B581403}|LinesAndCurves\\LinesAndCurves.csproj|solutionrelative:linesandcurves\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDE2CDA3-3B74-4555-917D-ECDAED13C39D}|Geometry\\Geometry.csproj|C:\\repos\\patterns\\LinesAndCurvesUPD\\geometry\\geometry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDE2CDA3-3B74-4555-917D-ECDAED13C39D}|Geometry\\Geometry.csproj|solutionrelative:geometry\\geometry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF2EB60D-759F-4332-85BD-05290B581403}|LinesAndCurves\\LinesAndCurves.csproj|C:\\repos\\patterns\\LinesAndCurvesUPD\\linesandcurves\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF2EB60D-759F-4332-85BD-05290B581403}|LinesAndCurves\\LinesAndCurves.csproj|solutionrelative:linesandcurves\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF2EB60D-759F-4332-85BD-05290B581403}|LinesAndCurves\\LinesAndCurves.csproj|C:\\repos\\patterns\\LinesAndCurvesUPD\\linesandcurves\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FF2EB60D-759F-4332-85BD-05290B581403}|LinesAndCurves\\LinesAndCurves.csproj|solutionrelative:linesandcurves\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF2EB60D-759F-4332-85BD-05290B581403}|LinesAndCurves\\LinesAndCurves.csproj|C:\\Users\\frostled\\Desktop\\patterns\\LinesAndCurvesUPD\\linesandcurves\\linesandcurves.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{FF2EB60D-759F-4332-85BD-05290B581403}|LinesAndCurves\\LinesAndCurves.csproj|C:\\repos\\patterns\\LinesAndCurvesUPD\\linesandcurves\\linesandcurves.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{FF2EB60D-759F-4332-85BD-05290B581403}|LinesAndCurves\\LinesAndCurves.csproj|solutionrelative:linesandcurves\\linesandcurves.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
@@ -34,88 +34,79 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\frostled\\Desktop\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\Form1.cs",
-              "RelativeDocumentMoniker": "LinesAndCurves\\Form1.cs",
-              "ToolTip": "C:\\Users\\frostled\\Desktop\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\Form1.cs [Design]",
-              "RelativeToolTip": "LinesAndCurves\\Form1.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "Visual.cs",
+              "DocumentMoniker": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.cs",
+              "RelativeDocumentMoniker": "Visual\\Visual.cs",
+              "ToolTip": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.cs",
+              "RelativeToolTip": "Visual\\Visual.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T23:09:53.121Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LinesAndCurves.csproj",
-              "DocumentMoniker": "C:\\Users\\frostled\\Desktop\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\LinesAndCurves.csproj",
-              "RelativeDocumentMoniker": "LinesAndCurves\\LinesAndCurves.csproj",
-              "ToolTip": "C:\\Users\\frostled\\Desktop\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\LinesAndCurves.csproj",
-              "RelativeToolTip": "LinesAndCurves\\LinesAndCurves.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-02T22:50:08.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\frostled\\Desktop\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "LinesAndCurves\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\frostled\\Desktop\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\Form1.Designer.cs",
-              "RelativeToolTip": "LinesAndCurves\\Form1.Designer.cs",
-              "ViewState": "AQIAAIsAAAAAAAAAAAAAABYAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T22:48:58.347Z",
+              "WhenOpened": "2024-04-02T16:52:16.516Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\frostled\\Desktop\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\Form1.cs",
+              "DocumentMoniker": "C:\\repos\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\Form1.cs",
               "RelativeDocumentMoniker": "LinesAndCurves\\Form1.cs",
-              "ToolTip": "C:\\Users\\frostled\\Desktop\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\Form1.cs",
+              "ToolTip": "C:\\repos\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\Form1.cs",
               "RelativeToolTip": "LinesAndCurves\\Form1.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAmwDgAAAAwAAAA",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAqwD4AAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T18:06:37.257Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Geometry.cs",
-              "DocumentMoniker": "C:\\Users\\frostled\\Desktop\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.cs",
-              "RelativeDocumentMoniker": "Geometry\\Geometry.cs",
-              "ToolTip": "C:\\Users\\frostled\\Desktop\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.cs",
-              "RelativeToolTip": "Geometry\\Geometry.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T16:52:38.357Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-02T18:06:37.257Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Visual.cs",
-              "DocumentMoniker": "C:\\Users\\frostled\\Desktop\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.cs",
-              "RelativeDocumentMoniker": "Visual\\Visual.cs",
-              "ToolTip": "C:\\Users\\frostled\\Desktop\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.cs",
-              "RelativeToolTip": "Visual\\Visual.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAgwEsAAAAjAAAA",
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\repos\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "LinesAndCurves\\Form1.Designer.cs",
+              "ToolTip": "C:\\repos\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\Form1.Designer.cs",
+              "RelativeToolTip": "LinesAndCurves\\Form1.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T16:52:16.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-02T22:48:58.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LinesAndCurves.csproj",
+              "DocumentMoniker": "C:\\repos\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\LinesAndCurves.csproj",
+              "RelativeDocumentMoniker": "LinesAndCurves\\LinesAndCurves.csproj",
+              "ToolTip": "C:\\repos\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\LinesAndCurves.csproj",
+              "RelativeToolTip": "LinesAndCurves\\LinesAndCurves.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-02T22:50:08.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Geometry.cs",
+              "DocumentMoniker": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.cs",
+              "RelativeDocumentMoniker": "Geometry\\Geometry.cs",
+              "ToolTip": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.cs",
+              "RelativeToolTip": "Geometry\\Geometry.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAewB8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T16:52:38.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentMoniker": "C:\\repos\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\Form1.cs",
+              "RelativeDocumentMoniker": "LinesAndCurves\\Form1.cs",
+              "ToolTip": "C:\\repos\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "RelativeToolTip": "LinesAndCurves\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T23:09:53.121Z"
             }
           ]
         }
