@@ -6,7 +6,7 @@ using System.Windows.Media.Animation;
 namespace Visual
 {
     public interface IDrawer
-    {
+    { 
         public void DrawCurve(ICurve C);
         public void DrawPoint(IPoint C);
         public void DrawSegment(ICurve C, IPoint A, IPoint B);
@@ -14,73 +14,48 @@ namespace Visual
 
     public class ChiralDrawer : IDrawer
     {
-        public ChiralDrawer(IDrawer D)
+        public ChiralDrawer(IDrawer D, int Width, int Height)
         {
             subdrawer = D;
+            this.Height = Height;
+            this.Width = Width;
         }
         public void DrawCurve(ICurve C)
         {
-
-            IPoint S = new Geometry.Point();
-            S = C.GetPoint(0);
-            IPoint E = new Geometry.Point();
-            E = C.GetPoint(1);
-
-            int xmult = 1;
-            int ymult = 1;
-            if (E.getX() > S.getX()) xmult = -1;
-            if (E.getY() > S.getY()) ymult = -1;
-
+            IPoint S = C.GetPoint(0);
+            IPoint E = C.GetPoint(-1);
+            // Draw start and end points
             DrawPoint(S);
-            DrawPoint(C.GetPoint(-1));
+            DrawPoint(E);
 
+            // start and of the segment
             IPoint A = new Geometry.Point();
             IPoint B = new Geometry.Point();
+
+            double ax, ay, bx, by;
+            int axmult = 1; 
+            int aymult = 1;
+            int bxmult = 1;
+            int bymult = 1;
 
             int n = 10;
             for (int i = 0; i < n; i++)
             {
-                A = C.GetPoint(i / (double)n);
-                B = C.GetPoint((i + 1) / (double)n);
-                E = B;
+                A = C.GetPoint(i / (double) n);
+                B = C.GetPoint((i + 1) / (double) n);
 
-                double ax = 0, ay = 0;
-                double bx = 0, by = 0;
+                axmult = (A.getX() > S.getX()) ? -1 : 1;
+                aymult = (A.getY() > S.getY()) ? -1 : 1;
+                bxmult = (B.getX() > S.getX()) ? -1 : 1;
+                bymult = (B.getY() > S.getY()) ? -1 : 1;
 
-                if (E.getX() > S.getX() && E.getY() <= S.getY())
-                    {
-                        ax = S.getX() - Math.Abs(S.getX() - A.getX());
-                        ay = S.getY() + Math.Abs(S.getY() - A.getY());
-                        bx = S.getX() - Math.Abs(S.getX() - B.getX());
-                        by = S.getY() + Math.Abs(S.getY() - B.getY());
-                    }
-                    else if (E.getX() <= S.getX() && E.getY() <= S.getY())
-                    {
-                        ax = S.getX() + Math.Abs(S.getX() - A.getX());
-                        ay = S.getY() + Math.Abs(S.getY() - A.getY());
-                        bx = S.getX() + Math.Abs(S.getX() - B.getX());
-                        by = S.getY() + Math.Abs(S.getY() - B.getY());
-                    }
-                    else if (E.getX() > S.getX() && E.getY() > S.getY())
-                    {
-                        ax = S.getX() - Math.Abs(S.getX() - A.getX());
-                        ay = S.getY() - Math.Abs(S.getY() - A.getY());
-                        bx = S.getX() - Math.Abs(S.getX() - B.getX());
-                        by = S.getY() - Math.Abs(S.getY() - B.getY());
-                    }
-                    else if (E.getX() <= S.getX() && E.getY() > S.getY())
-                    {
-                        ax = S.getX() + Math.Abs(S.getX() - A.getX());
-                        ay = S.getY() - Math.Abs(S.getY() - A.getY());
-                        bx = S.getX() + Math.Abs(S.getX() - B.getX());
-                        by = S.getY() - Math.Abs(S.getY() - B.getY());
-                    }
+                ax = S.getX() + axmult * Math.Abs(S.getX() - A.getX());
+                ay = S.getY() + aymult * Math.Abs(S.getY() - A.getY());
+                bx = S.getX() + bxmult * Math.Abs(S.getX() - B.getX());
+                by = S.getY() + bymult * Math.Abs(S.getY() - B.getY());
 
-                A.setX(ax);
-                A.setY(ay);
-
-                B.setX(bx);
-                B.setY(by);
+                A.setX(ax); B.setX(bx);
+                A.setY(ay); B.setY(by);
 
                 DrawSegment(C, A, B);
             }
@@ -95,6 +70,8 @@ namespace Visual
         }
 
         private IDrawer subdrawer = null;
+        private int Height;
+        private int Width;
     }
 
     public class BlackDrawer : IDrawer
@@ -143,12 +120,7 @@ namespace Visual
         }
         public void DrawSegment(ICurve C, IPoint A, IPoint B)
         {
-            //if (Math.Abs(t2) == 1)
-            //{
-            //    customPen.CustomEndCap = new System.Drawing.Drawing2D.AdjustableArrowCap(5, 5);
-            //}
             g.DrawLine(customPen, (int) A.getX(), (int) A.getY(), (int) B.getX(), (int) B.getY());
-            //customPen.EndCap = new System.Drawing.Drawing2D.LineCap();
         }
         public void DrawCurve(ICurve C)
         {
