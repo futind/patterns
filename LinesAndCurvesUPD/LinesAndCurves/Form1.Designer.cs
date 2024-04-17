@@ -87,7 +87,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1029, 562);
             panel1.TabIndex = 0;
-            panel1.Click += panel1_Click;
+            //panel1.Click += panel1_Click;
             panel1.Paint += panel1_Paint;
             // 
             // tabPage2
@@ -118,8 +118,8 @@
             Controls.Add(Generate_button);
             Name = "Main_Form";
             Text = "Main_Form";
-            Paint += Main_Form_Paint;
-            MouseDown += Main_Form_Mouse_Down;
+            //Paint += Main_Form_Paint;
+            //MouseDown += Main_Form_Mouse_Down;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage2.ResumeLayout(false);

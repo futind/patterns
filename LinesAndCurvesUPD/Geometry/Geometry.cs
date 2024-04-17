@@ -78,6 +78,14 @@ namespace Geometry
             np.setY((1 - t) * _a.getY() + t * _b.getY());
             return np;
         }
+
+        public string ToSvgPath()
+        {
+            // Формируем строку SVG для обычной линии
+            string svgPath = $"<line x1=\"{_a.getX()}\" y1=\"{_a.getY()}\" x2=\"{_b.getX()}\" y2=\"{_b.getY()}\" style = stroke=\"green\" />";
+
+            return svgPath;
+        }
     }
 
     public class Bezier : ACurve
@@ -100,6 +108,14 @@ namespace Geometry
                      3 * Math.Pow(t, 2) * (1 - t) * _d.getY() +
                      Math.Pow(t, 3) * _b.getY());
             return np;
+        }
+
+        public string ToSvgPath()
+        {
+            // Формируем строку SVG для кривой Безье
+            string svgPath = $"M {_a.getX()},{_a.getY()} C {_c.getX()},{_c.getY()} {_d.getX()},{_d.getY()} {_b.getX()},{_b.getY()}";
+
+            return svgPath;
         }
 
         private IPoint _c, _d;
