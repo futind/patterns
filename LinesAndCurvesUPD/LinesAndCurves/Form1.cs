@@ -7,49 +7,69 @@ namespace LinesAndCurves
 {
     public partial class Main_Form : Form
     {
-
-        IDrawable[] curves;
-        private bool mirrorMode = false;
+        List<VisualCurve> curves;
+        private bool generate_new = false;
         public Main_Form()
         {
             InitializeComponent();
-            curves = new IDrawable[2];
+            generate_new = false;
+            curves = new List<VisualCurve> ();
+            //curves = new IDrawable[2];
         }
 
         private void Main_Form_Generate_Button_Clicked(object sender, EventArgs e)
         {
+            generate_new = true;
             panel1.Refresh();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+            if (generate_new == true)
+            {
+                curves.Clear();
+                Random rnd = new Random();
+                IPoint a = new Geometry.Point((float)rnd.Next(200, 500), (float)rnd.Next(100, 300));
+                IPoint b = new Geometry.Point((float)rnd.Next(200, 500), (float)rnd.Next(100, 300));
+                IPoint c = new Geometry.Point((float)rnd.Next(200, 500), (float)rnd.Next(100, 300));
+                IPoint d = new Geometry.Point((float)rnd.Next(200, 500), (float)rnd.Next(100, 300));
 
-            e.Graphics.DrawRectangle(Pens.Red, 0, 0, 5, 5);
-            e.Graphics.DrawRectangle(Pens.Green, 10, 10, 5, 5);
-            e.Graphics.DrawRectangle(Pens.Blue, -10, -10, 5, 5);
-            e.Graphics.DrawRectangle(Pens.Yellow, -10, 10, 5, 5);
-            e.Graphics.DrawRectangle(Pens.Purple, 10, -10, 5, 5);
-
-            Random rnd = new Random();
-            IPoint a = new Geometry.Point((float)rnd.Next(200, 500), (float)rnd.Next(100, 300));
-            IPoint b = new Geometry.Point((float)rnd.Next(200, 500), (float)rnd.Next(100, 300));
-            IPoint c = new Geometry.Point((float)rnd.Next(200, 500), (float)rnd.Next(100, 300));
-            IPoint d = new Geometry.Point((float)rnd.Next(200, 500), (float)rnd.Next(100, 300));
-
-
-            curves[0] = new VisualCurve(new Line(a, b));
-            curves[1] = new VisualCurve(new Bezier(a, b, c, d));
-
+                curves.Add(new VisualCurve(new Line(a, b)));
+                curves.Add(new VisualCurve(new Bezier(a, b, c, d)));
+                generate_new = false;
+            }
 
             IDrawer black = new BlackDrawer(e.Graphics);
             IDrawer green = new GreenDrawer(e.Graphics);
-            IDrawer chiralgreen = new ChiralDrawer(green, this.Width, this.Height);
-            IDrawer chiralblack = new ChiralDrawer(black, this.Width, this.Height);
 
-            curves[0].Draw(green);
-            curves[0].Draw(chiralgreen);
-            curves[1].Draw(black);
-            curves[1].Draw(chiralblack);
+            if (curves.Count > 0)
+            {
+                curves[0].Draw(green);
+                curves[1].Draw(black);
+            }
+
+            if (checkBox1.Checked && curves.Count > 0)
+            {
+                IDrawer chiralgreen = new ChiralDrawer(green);
+                IDrawer chiralblack = new ChiralDrawer(black);
+                curves[0].Draw(chiralgreen);
+                curves[1].Draw(chiralblack);
+            }
+        }
+
+        private void panel1_draw_mirror(object sender, PaintEventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                curves[0].Draw(new ChiralDrawer(new GreenDrawer(e.Graphics)));
+                curves[1].Draw(new ChiralDrawer(new BlackDrawer(e.Graphics)));
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            generate_new = false;
+            panel1.Refresh();
         }
 
         private void Save_Button_Clicked(object sender, EventArgs e)
@@ -91,8 +111,6 @@ namespace LinesAndCurves
             MessageBox.Show("Отрисованные линии успешно сохранены в формате SVG по пути: " + filePath);
         }
 
-
-
-
+        
     }
 }

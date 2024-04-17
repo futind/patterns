@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repos\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\LinesAndCurves.csproj": {}
+    "C:\\Users\\frostled\\Desktop\\svglab\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\LinesAndCurves.csproj": {}
   },
   "projects": {
-    "C:\\repos\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj": {
+    "C:\\Users\\frostled\\Desktop\\svglab\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj",
+        "projectUniqueName": "C:\\Users\\frostled\\Desktop\\svglab\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj",
         "projectName": "Geometry",
-        "projectPath": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj",
-        "packagesPath": "C:\\Users\\Falirchik\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Geometry\\obj\\",
+        "projectPath": "C:\\Users\\frostled\\Desktop\\svglab\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj",
+        "packagesPath": "C:\\Users\\frostled\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\frostled\\Desktop\\svglab\\patterns\\LinesAndCurvesUPD\\Geometry\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Falirchik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\frostled\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -63,21 +68,25 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\repos\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\LinesAndCurves.csproj": {
+    "C:\\Users\\frostled\\Desktop\\svglab\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\LinesAndCurves.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\LinesAndCurves.csproj",
+        "projectUniqueName": "C:\\Users\\frostled\\Desktop\\svglab\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\LinesAndCurves.csproj",
         "projectName": "LinesAndCurves",
-        "projectPath": "C:\\repos\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\LinesAndCurves.csproj",
-        "packagesPath": "C:\\Users\\Falirchik\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\obj\\",
+        "projectPath": "C:\\Users\\frostled\\Desktop\\svglab\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\LinesAndCurves.csproj",
+        "packagesPath": "C:\\Users\\frostled\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\frostled\\Desktop\\svglab\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Falirchik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\frostled\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,17 +94,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\repos\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj": {
-                "projectPath": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj"
+              "C:\\Users\\frostled\\Desktop\\svglab\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj": {
+                "projectPath": "C:\\Users\\frostled\\Desktop\\svglab\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj"
               },
-              "C:\\repos\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.csproj": {
-                "projectPath": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.csproj"
+              "C:\\Users\\frostled\\Desktop\\svglab\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.csproj": {
+                "projectPath": "C:\\Users\\frostled\\Desktop\\svglab\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.csproj"
               }
             }
           }
@@ -133,21 +143,25 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\repos\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.csproj": {
+    "C:\\Users\\frostled\\Desktop\\svglab\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.csproj",
+        "projectUniqueName": "C:\\Users\\frostled\\Desktop\\svglab\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.csproj",
         "projectName": "Visual",
-        "projectPath": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.csproj",
-        "packagesPath": "C:\\Users\\Falirchik\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Visual\\obj\\",
+        "projectPath": "C:\\Users\\frostled\\Desktop\\svglab\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.csproj",
+        "packagesPath": "C:\\Users\\frostled\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\frostled\\Desktop\\svglab\\patterns\\LinesAndCurvesUPD\\Visual\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Falirchik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\frostled\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -155,14 +169,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\repos\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj": {
-                "projectPath": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj"
+              "C:\\Users\\frostled\\Desktop\\svglab\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj": {
+                "projectPath": "C:\\Users\\frostled\\Desktop\\svglab\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj"
               }
             }
           }
@@ -206,7 +221,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

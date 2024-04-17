@@ -35,6 +35,7 @@
             panel1 = new Panel();
             tabPage2 = new TabPage();
             panel2 = new Panel();
+            checkBox1 = new CheckBox();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -87,7 +88,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1029, 562);
             panel1.TabIndex = 0;
-            //panel1.Click += panel1_Click;
             panel1.Paint += panel1_Paint;
             // 
             // tabPage2
@@ -108,22 +108,33 @@
             panel2.Size = new Size(800, 400);
             panel2.TabIndex = 1;
             // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(270, 20);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(83, 19);
+            checkBox1.TabIndex = 3;
+            checkBox1.Text = "checkBox1";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
             // Main_Form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1079, 697);
+            Controls.Add(checkBox1);
             Controls.Add(tabControl1);
             Controls.Add(Save_button);
             Controls.Add(Generate_button);
             Name = "Main_Form";
             Text = "Main_Form";
-            //Paint += Main_Form_Paint;
-            //MouseDown += Main_Form_Mouse_Down;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -135,5 +146,6 @@
         private Panel panel1;
         private TabPage tabPage2;
         private Panel panel2;
+        private CheckBox checkBox1;
     }
 }

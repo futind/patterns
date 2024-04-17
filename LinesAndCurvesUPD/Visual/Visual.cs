@@ -14,11 +14,9 @@ namespace Visual
 
     public class ChiralDrawer : IDrawer
     {
-        public ChiralDrawer(IDrawer D, int Width, int Height)
+        public ChiralDrawer(IDrawer D)
         {
             subdrawer = D;
-            this.Height = Height;
-            this.Width = Width;
         }
         public void DrawCurve(ICurve C)
         {
