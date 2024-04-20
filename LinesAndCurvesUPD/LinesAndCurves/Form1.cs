@@ -42,16 +42,19 @@ namespace LinesAndCurves
             IDrawer black = new BlackDrawer(e.Graphics);
             IDrawer green = new GreenDrawer(e.Graphics);
 
-            if (curves.Count > 0)
+            if (curves.Count > 0 && !checkBox1.Checked)
             {
                 curves[0].Draw(green);
                 curves[1].Draw(black);
             }
 
+
             if (checkBox1.Checked && curves.Count > 0)
             {
-                IDrawer chiralgreen = new ChiralDrawer(green);
-                IDrawer chiralblack = new ChiralDrawer(black);
+                
+                Rectangle drawingArea = e.ClipRectangle;
+                IDrawer chiralgreen = new ChiralDrawer(green, curves[0], drawingArea);
+                IDrawer chiralblack = new ChiralDrawer(black, curves[1], drawingArea);
                 curves[0].Draw(chiralgreen);
                 curves[1].Draw(chiralblack);
             }
@@ -85,6 +88,7 @@ namespace LinesAndCurves
                 SaveToSVG(filePath, panel1.Width, panel1.Height);
             }
         }
+
 
         private void SaveToSVG(string filePath, int width, int height)
         {
