@@ -126,7 +126,7 @@ namespace LinesAndCurves
                             string x4 = p4.getX().ToString(CultureInfo.CreateSpecificCulture("en-US"));
                             string y4 = p4.getY().ToString(CultureInfo.CreateSpecificCulture("en-US"));
 
-                            writer.WriteLine($"<path d=\"M{x1} {y1} C {x2} {y2}, {x3} {y3}, {x4} {y4}\" stroke=\"black\" stroke-width=\"3\" fill=\"none\" />");
+                            writer.WriteLine($"<path d=\"M{x1} {y1} C {x2} {y2}, {x3} {y3}, {x4} {y4}\" stroke=\"black\" stroke-width=\"3\" stroke-dasharray=\"10 3\" fill=\"none\" />");
                         }
                     }
                 }

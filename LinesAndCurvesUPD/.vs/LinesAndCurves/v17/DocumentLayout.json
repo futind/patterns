@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "Visual\\Visual.cs",
               "ToolTip": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.cs",
               "RelativeToolTip": "Visual\\Visual.cs",
-              "ViewState": "AQIAAIwAAAAAAAAAAAAQwJMAAAAwAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAA9wBQAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-02T16:52:16.516Z",
               "EditorCaption": ""
@@ -53,7 +53,7 @@
               "RelativeDocumentMoniker": "LinesAndCurves\\Form1.cs",
               "ToolTip": "C:\\repos\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\Form1.cs",
               "RelativeToolTip": "LinesAndCurves\\Form1.cs",
-              "ViewState": "AQIAAF0AAAAAAAAAAAAuwHYAAAAAAAAA",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAuwHUAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-17T12:21:07.671Z",
               "EditorCaption": ""
@@ -67,8 +67,7 @@
               "ToolTip": "C:\\repos\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\Form1.cs [Design]",
               "RelativeToolTip": "LinesAndCurves\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T12:19:53.541Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-17T12:19:53.541Z"
             },
             {
               "$type": "Document",
@@ -80,8 +79,7 @@
               "RelativeToolTip": "Geometry\\Geometry.cs",
               "ViewState": "AQIAAFMAAAAAAAAAAAAwwF8AAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T16:52:38.357Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-02T16:52:38.357Z"
             }
           ]
         }
