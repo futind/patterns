@@ -20,7 +20,11 @@ namespace LinesAndCurves
         private void Main_Form_Generate_Button_Clicked(object sender, EventArgs e)
         {
             generate_new = true;
+            
             panel1.Refresh();
+            checkBox1.Checked = false;
+
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

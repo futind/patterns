@@ -32,7 +32,9 @@ namespace Visual
             if (isMirror)
             {
                 // Reflect the point
-                p = new Geometry.Point(g.VisibleClipBounds.Width - p.getX(), g.ClipBounds.Height - p.getY());
+                float centerX = g.VisibleClipBounds.Width / 2;
+                float centerY = g.VisibleClipBounds.Height / 2;
+                p = new Geometry.Point(centerX - (p.getX() - centerX), centerY - (p.getY() - centerY));
             }
             g.DrawRectangle(customPen, (int)(p.getX() - 2.5), (int)(p.getY() + 2.5), 5, 5);
         }
