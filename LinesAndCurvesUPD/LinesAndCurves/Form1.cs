@@ -9,18 +9,22 @@ namespace LinesAndCurves
     {
         List<VisualCurve> curves;
         private bool generate_new = false;
+        bool isMirror = false;
         public Main_Form()
         {
             InitializeComponent();
             generate_new = false;
             curves = new List<VisualCurve> ();
-            //curves = new IDrawable[2];
         }
 
         private void Main_Form_Generate_Button_Clicked(object sender, EventArgs e)
         {
             generate_new = true;
+            
             panel1.Refresh();
+            checkBox1.Checked = false;
+
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -44,31 +48,16 @@ namespace LinesAndCurves
 
             if (curves.Count > 0)
             {
-                curves[0].Draw(green);
-                curves[1].Draw(black);
+                curves[0].Draw(green, isMirror);
+                curves[1].Draw(black, isMirror);
             }
-
-            if (checkBox1.Checked && curves.Count > 0)
-            {
-                IDrawer chiralgreen = new ChiralDrawer(green);
-                IDrawer chiralblack = new ChiralDrawer(black);
-                curves[0].Draw(chiralgreen);
-                curves[1].Draw(chiralblack);
-            }
-        }
-
-        private void panel1_draw_mirror(object sender, PaintEventArgs e)
-        {
-            if (checkBox1.Checked)
-            {
-                curves[0].Draw(new ChiralDrawer(new GreenDrawer(e.Graphics)));
-                curves[1].Draw(new ChiralDrawer(new BlackDrawer(e.Graphics)));
-            }
+            
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             generate_new = false;
+            isMirror = checkBox1.Checked;
             panel1.Refresh();
         }
 
@@ -85,6 +74,7 @@ namespace LinesAndCurves
                 SaveToSVG(filePath, panel1.Width, panel1.Height);
             }
         }
+
 
         private void SaveToSVG(string filePath, int width, int height)
         {

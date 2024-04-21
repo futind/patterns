@@ -113,9 +113,9 @@
             checkBox1.AutoSize = true;
             checkBox1.Location = new Point(270, 20);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(83, 19);
+            checkBox1.Size = new Size(48, 19);
             checkBox1.TabIndex = 3;
-            checkBox1.Text = "checkBox1";
+            checkBox1.Text = "Flip!";
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 

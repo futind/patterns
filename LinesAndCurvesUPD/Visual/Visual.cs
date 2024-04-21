@@ -7,73 +7,14 @@ namespace Visual
 {
     public interface IDrawer
     { 
-        public void DrawCurve(ICurve C);
-        public void DrawPoint(IPoint C);
-        public void DrawSegment(ICurve C, IPoint A, IPoint B);
-    }
-
-    public class ChiralDrawer : IDrawer
-    {
-        public ChiralDrawer(IDrawer D)
-        {
-            subdrawer = D;
-        }
-        public void DrawCurve(ICurve C)
-        {
-            IPoint S = C.GetPoint(0);
-            IPoint E = C.GetPoint(-1);
-            // Draw start and end points
-            DrawPoint(S);
-            DrawPoint(E);
-
-            // start and of the segment
-            IPoint A = new Geometry.Point();
-            IPoint B = new Geometry.Point();
-
-            double ax, ay, bx, by;
-            int axmult = 1; 
-            int aymult = 1;
-            int bxmult = 1;
-            int bymult = 1;
-
-            int n = 10;
-            for (int i = 0; i < n; i++)
-            {
-                A = C.GetPoint(i / (double) n);
-                B = C.GetPoint((i + 1) / (double) n);
-
-                axmult = (A.getX() > S.getX()) ? -1 : 1;
-                aymult = (A.getY() > S.getY()) ? -1 : 1;
-                bxmult = (B.getX() > S.getX()) ? -1 : 1;
-                bymult = (B.getY() > S.getY()) ? -1 : 1;
-
-                ax = S.getX() + axmult * Math.Abs(S.getX() - A.getX());
-                ay = S.getY() + aymult * Math.Abs(S.getY() - A.getY());
-                bx = S.getX() + bxmult * Math.Abs(S.getX() - B.getX());
-                by = S.getY() + bymult * Math.Abs(S.getY() - B.getY());
-
-                A.setX(ax); B.setX(bx);
-                A.setY(ay); B.setY(by);
-
-                DrawSegment(C, A, B);
-            }
-        }
-        public void DrawPoint(IPoint p)
-        {
-            subdrawer.DrawPoint(p);
-        }
-        public void DrawSegment(ICurve C, IPoint A, IPoint B)
-        {
-            subdrawer.DrawSegment(C, A, B);
-        }
-
-        private IDrawer subdrawer = null;
-        private int Height;
-        private int Width;
+        public void DrawCurve(ICurve C, bool isMirror);
+        public void DrawPoint(IPoint C, bool isMirror);
+        public void DrawSegment(ICurve C, IPoint A, IPoint B, bool isMirror);
     }
 
     public class BlackDrawer : IDrawer
     {
+        
         public BlackDrawer(Graphics G)
         {
             customPen = new Pen(Color.Black, 3);
@@ -81,24 +22,54 @@ namespace Visual
 
             g = G;
         }
+
         public void DrawPoint(IPoint p)
         {
+            DrawPoint(p, false); // call the modified method with isMirror = false
+        }
+        public void DrawPoint(IPoint p, bool isMirror)
+        {
+            if (isMirror)
+            {
+                // Reflect the point
+                float centerX = g.VisibleClipBounds.Width / 2;
+                float centerY = g.VisibleClipBounds.Height / 2;
+                p = new Geometry.Point(centerX - (p.getX() - centerX), centerY - (p.getY() - centerY));
+            }
             g.DrawRectangle(customPen, (int)(p.getX() - 2.5), (int)(p.getY() + 2.5), 5, 5);
         }
+
         public void DrawSegment(ICurve C, IPoint A, IPoint B)
         {
-            g.DrawLine(customPen, (int) A.getX(), (int) A.getY(), (int) B.getX(), (int) B.getY());
+            DrawSegment(C, A, B, false); // call the modified method with isMirror = false
         }
+        public void DrawSegment(ICurve C, IPoint A, IPoint B, bool isMirror)
+        {
+            if (isMirror)
+            {
+                // Reflect the line segment
+                A = new Geometry.Point(g.VisibleClipBounds.Width - A.getX(), g.VisibleClipBounds.Height - A.getY());
+                B = new Geometry.Point(g.VisibleClipBounds.Width - B.getX(), g.VisibleClipBounds.Height - B.getY());
+            }
+            g.DrawLine(customPen, (int)A.getX(), (int)A.getY(), (int)B.getX(), (int)B.getY());
+        }
+
         public void DrawCurve(ICurve C)
         {
-            DrawPoint(C.GetPoint(0));
-            DrawPoint(C.GetPoint(1));
-
+            DrawCurve(C, false); // call the modified method with isMirror = false
+        }
+        public void DrawCurve(ICurve C, bool isMirror)
+        {
             int n = 10;
-            for (int i = 0; i < n; i++)
-            {
-                DrawSegment(C, C.GetPoint(i / (double)n), C.GetPoint((i + 1) / (double)n));
-            }
+            
+                DrawPoint(C.GetPoint(0), isMirror);
+                DrawPoint(C.GetPoint(1), isMirror);
+                // Reflect the curve
+                for (int i = 0; i < n; i++)
+                {
+                    DrawSegment(C, C.GetPoint(i / (double)n), C.GetPoint((i + 1) / (double)n), isMirror);
+                }
+            
         }
         private Graphics g;
         private Pen customPen;
@@ -112,27 +83,57 @@ namespace Visual
             customPen = new Pen(Color.Green, 3);
             g = G;
         }
+
         public void DrawPoint(IPoint p)
         {
-            g.DrawEllipse(customPen, (int) p.getX(), (int) p.getY(), 5, 5);
+            DrawPoint(p, false); // call the modified method with isMirror = false
         }
+        public void DrawPoint(IPoint p, bool isMirror)
+        {
+            if (isMirror)
+            {
+                // Reflect the point
+                p = new Geometry.Point(g.VisibleClipBounds.Width - p.getX(), g.VisibleClipBounds.Height - p.getY());
+            }
+            g.DrawEllipse(customPen, (int)p.getX(), (int)p.getY(), 5, 5);
+        }
+
         public void DrawSegment(ICurve C, IPoint A, IPoint B)
         {
-            g.DrawLine(customPen, (int) A.getX(), (int) A.getY(), (int) B.getX(), (int) B.getY());
+            DrawSegment(C, A, B, false); // call the modified method with isMirror = false
         }
+
+        public void DrawSegment(ICurve C, IPoint A, IPoint B, bool isMirror)
+        {
+            if (isMirror)
+            {
+                // Reflect the line segment
+                A = new Geometry.Point(g.VisibleClipBounds.Width - A.getX(), g.VisibleClipBounds.Height - A.getY());
+                B = new Geometry.Point(g.VisibleClipBounds.Width - B.getX(), g.VisibleClipBounds.Height - B.getY());
+            }
+            g.DrawLine(customPen, (int)A.getX(), (int)A.getY(), (int)B.getX(), (int)B.getY());
+        }
+
         public void DrawCurve(ICurve C)
         {
-            DrawPoint(C.GetPoint(0));
-            DrawPoint(C.GetPoint(1));
+            DrawCurve(C, false); // call the modified method with isMirror = false
+        }
+        public void DrawCurve(ICurve C, bool isMirror)
+        {
 
             int n = 10;
-            for (int i = 0; i < n - 1; i++)
+
+            DrawPoint(C.GetPoint(0), isMirror);
+            DrawPoint(C.GetPoint(1), isMirror);
+            // Reflect the curve
+            for (int i = 0; i < n-1; i++)
             {
-                DrawSegment(C, C.GetPoint(i / (double)n), C.GetPoint((i + 1) / (double)n));
+                DrawSegment(C, C.GetPoint(i / (double)n), C.GetPoint((i + 1) / (double)n), isMirror);
             }
             customPen.CustomEndCap = new System.Drawing.Drawing2D.AdjustableArrowCap(5, 5);
-            DrawSegment(C, C.GetPoint((n - 1) / (double)n), C.GetPoint(1));
+            DrawSegment(C, C.GetPoint((n - 1) / (double)n), C.GetPoint(1), isMirror);
             customPen.EndCap = new System.Drawing.Drawing2D.LineCap();
+
         }
 
         private Pen customPen;
@@ -141,7 +142,7 @@ namespace Visual
 
     public interface IDrawable
     {
-        public void Draw(IDrawer g);
+        public void Draw(IDrawer g, bool isMirror);
     }
 
     public class VisualCurve : IDrawable, ICurve
@@ -151,9 +152,9 @@ namespace Visual
             curve = C;
         }
 
-        public void Draw(IDrawer d)
+        public void Draw(IDrawer d, bool isMirror)
         {
-            d.DrawCurve(this);
+            d.DrawCurve(this, isMirror);
         }
 
         public IPoint GetPoint(double t)
