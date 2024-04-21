@@ -81,61 +81,75 @@ namespace LinesAndCurves
         {
             using (StreamWriter writer = new StreamWriter(filePath))
             {
-                // Write the SVG header
-                writer.WriteLine("<?xml version=\"1.0\" standalone=\"no\"?>");
-                writer.WriteLine("<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" ");
-                writer.WriteLine("\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">");
-                writer.WriteLine($"<svg width=\"{width}\" height=\"{height}\" version=\"1.1\" ");
-                writer.WriteLine("xmlns=\"http://www.w3.org/2000/svg\">");
+                WriteSvgHeader(writer, width, height);
+                WriteMarkerDefinition(writer);
 
-                // Write the lines and Bezier curve to the SVG file
                 foreach (var curve in curves)
                 {
-                    if (curve is VisualCurve)
+                    if (curve is VisualCurve visualCurve)
                     {
-                        VisualCurve visualCurve = (VisualCurve)curve;
-                        ICurve curveObject = visualCurve.CurveAccessor; // Use the CurveAccessor property
+                        ICurve curveObject = visualCurve.CurveAccessor;
 
-                        if (curveObject is Line)
+                        if (curveObject is Line line)
                         {
-                            Line line = (Line)curveObject;
-                            IPoint p1 = line.GetPoint(0);
-                            IPoint p2 = line.GetPoint(1);
-
-                            string x1 = p1.getX().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-                            string y1 = p1.getY().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-                            string x2 = p2.getX().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-                            string y2 = p2.getY().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-
-                            writer.WriteLine($"<line x1=\"{x1}\" y1=\"{y1}\" x2=\"{x2}\" y2=\"{y2}\" stroke=\"green\" stroke-width=\"3\" />");
+                            WriteLine(writer, line.GetPoint(0), line.GetPoint(1));
                         }
-                        else if (curveObject is Bezier)
+                        else if (curveObject is Bezier bezier)
                         {
-                            Bezier bezier = (Bezier)curveObject;
-                            IPoint p1 = bezier.P1;
-                            IPoint p2 = bezier.P2;
-                            IPoint p3 = bezier.P3;
-                            IPoint p4 = bezier.P4;
-
-                            string x1 = p1.getX().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-                            string y1 = p1.getY().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-                            string x2 = p2.getX().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-                            string y2 = p2.getY().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-                            string x3 = p3.getX().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-                            string y3 = p3.getY().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-                            string x4 = p4.getX().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-                            string y4 = p4.getY().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-
-                            writer.WriteLine($"<path d=\"M{x1} {y1} C {x2} {y2}, {x3} {y3}, {x4} {y4}\" stroke=\"black\" stroke-width=\"3\" fill=\"none\" />");
+                            WriteBezier(writer, bezier.P1, bezier.P2, bezier.P3, bezier.P4);
                         }
                     }
                 }
 
-                // Close the SVG file
                 writer.WriteLine("</svg>");
             }
 
             MessageBox.Show("Lines and Bezier curve saved to SVG file successfully!");
+        }
+
+        private void WriteSvgHeader(StreamWriter writer, int width, int height)
+        {
+            writer.WriteLine("<?xml version=\"1.0\" standalone=\"no\"?>");
+            writer.WriteLine("<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" ");
+            writer.WriteLine("\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">");
+            writer.WriteLine($"<svg width=\"{width}\" height=\"{height}\" version=\"1.1\" ");
+            writer.WriteLine("xmlns=\"http://www.w3.org/2000/svg\">");
+        }
+
+        private void WriteMarkerDefinition(StreamWriter writer)
+        {
+            writer.WriteLine("<defs>");
+            writer.WriteLine("  <marker id=\"arrow\" viewBox=\"0 0 5 5\" refX=\"3\" refY=\"3\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto\">");
+            writer.WriteLine("    <path d=\"M 0 0 L 5 3 L 0 5 Z\" fill=\"green\"/>");
+            writer.WriteLine("  </marker>");
+            writer.WriteLine("</defs>");
+        }
+
+        private void WriteLine(StreamWriter writer, IPoint p1, IPoint p2)
+        {
+            int x1 = (int)p1.getX();
+            int y1 = (int)p1.getY();
+            int x2 = (int)p2.getX();
+            int y2 = (int)p2.getY();
+
+            writer.WriteLine($"<ellipse cx=\"{x1}\" cy=\"{y1}\" rx=\"3\" ry=\"3\" stroke=\"green\" stroke-width=\"3\" fill=\"none\" />");
+            writer.WriteLine($"<line x1=\"{x1}\" y1=\"{y1}\" x2=\"{x2}\" y2=\"{y2}\" style=\"stroke:green;stroke-width:3\" marker-end=\"url(#arrow)\" />");
+        }
+
+        private void WriteBezier(StreamWriter writer, IPoint p1, IPoint p2, IPoint p3, IPoint p4)
+        {
+            int x1 = (int)p1.getX();
+            int y1 = (int)p1.getY();
+            int x2 = (int)p2.getX();
+            int y2 = (int)p2.getY();
+            int x3 = (int)p3.getX();
+            int y3 = (int)p3.getY();
+            int x4 = (int)p4.getX();
+            int y4 = (int)p4.getY();
+
+            writer.WriteLine($"<rect x=\"{(x1 - 2)}\" y=\"{(y1 - 2)}\" width=\"5\" height=\"5\" stroke=\"black\" stroke-width=\"3\" fill=\"none\" />");
+            writer.WriteLine($"<path d=\"M{x1} {y1} C {x2} {y2}, {x3} {y3}, {x4} {y4}\" stroke=\"black\" stroke-width=\"3\" stroke-dasharray=\"10 3\" fill=\"none\" />");
+            writer.WriteLine($"<rect x=\"{(x4 - 2)}\" y=\"{(y4 - 2)}\" width=\"5\" height=\"5\" stroke=\"black\" stroke-width=\"3\" fill=\"none\" />");
         }
 
 
