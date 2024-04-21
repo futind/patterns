@@ -1,4 +1,5 @@
 using Geometry;
+using System.Globalization;
 using System.Windows.Forms;
 using System.Windows.Media.Imaging;
 using Visual;
@@ -78,29 +79,65 @@ namespace LinesAndCurves
 
         private void SaveToSVG(string filePath, int width, int height)
         {
-            // Создаем SVG-файл и открываем его для записи
             using (StreamWriter writer = new StreamWriter(filePath))
             {
-                // Записываем заголовок SVG
+                // Write the SVG header
                 writer.WriteLine("<?xml version=\"1.0\" standalone=\"no\"?>");
                 writer.WriteLine("<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" ");
                 writer.WriteLine("\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">");
                 writer.WriteLine($"<svg width=\"{width}\" height=\"{height}\" version=\"1.1\" ");
                 writer.WriteLine("xmlns=\"http://www.w3.org/2000/svg\">");
 
-                // Проходим по списку линий и записываем каждую в SVG
+                // Write the lines and Bezier curve to the SVG file
                 foreach (var curve in curves)
                 {
-                    //writer.WriteLine(curve.ToSvgPath());
+                    if (curve is VisualCurve)
+                    {
+                        VisualCurve visualCurve = (VisualCurve)curve;
+                        ICurve curveObject = visualCurve.CurveAccessor; // Use the CurveAccessor property
+
+                        if (curveObject is Line)
+                        {
+                            Line line = (Line)curveObject;
+                            IPoint p1 = line.GetPoint(0);
+                            IPoint p2 = line.GetPoint(1);
+
+                            string x1 = p1.getX().ToString(CultureInfo.CreateSpecificCulture("en-US"));
+                            string y1 = p1.getY().ToString(CultureInfo.CreateSpecificCulture("en-US"));
+                            string x2 = p2.getX().ToString(CultureInfo.CreateSpecificCulture("en-US"));
+                            string y2 = p2.getY().ToString(CultureInfo.CreateSpecificCulture("en-US"));
+
+                            writer.WriteLine($"<line x1=\"{x1}\" y1=\"{y1}\" x2=\"{x2}\" y2=\"{y2}\" stroke=\"green\" stroke-width=\"3\" />");
+                        }
+                        else if (curveObject is Bezier)
+                        {
+                            Bezier bezier = (Bezier)curveObject;
+                            IPoint p1 = bezier.P1;
+                            IPoint p2 = bezier.P2;
+                            IPoint p3 = bezier.P3;
+                            IPoint p4 = bezier.P4;
+
+                            string x1 = p1.getX().ToString(CultureInfo.CreateSpecificCulture("en-US"));
+                            string y1 = p1.getY().ToString(CultureInfo.CreateSpecificCulture("en-US"));
+                            string x2 = p2.getX().ToString(CultureInfo.CreateSpecificCulture("en-US"));
+                            string y2 = p2.getY().ToString(CultureInfo.CreateSpecificCulture("en-US"));
+                            string x3 = p3.getX().ToString(CultureInfo.CreateSpecificCulture("en-US"));
+                            string y3 = p3.getY().ToString(CultureInfo.CreateSpecificCulture("en-US"));
+                            string x4 = p4.getX().ToString(CultureInfo.CreateSpecificCulture("en-US"));
+                            string y4 = p4.getY().ToString(CultureInfo.CreateSpecificCulture("en-US"));
+
+                            writer.WriteLine($"<path d=\"M{x1} {y1} C {x2} {y2}, {x3} {y3}, {x4} {y4}\" stroke=\"black\" stroke-width=\"3\" fill=\"none\" />");
+                        }
+                    }
                 }
 
-                // Закрываем тег SVG
+                // Close the SVG file
                 writer.WriteLine("</svg>");
             }
 
-            MessageBox.Show("Отрисованные линии успешно сохранены в формате SVG по пути: " + filePath);
+            MessageBox.Show("Lines and Bezier curve saved to SVG file successfully!");
         }
 
-        
+
     }
 }

@@ -90,6 +90,11 @@ namespace Geometry
 
     public class Bezier : ACurve
     {
+        public IPoint P1 { get { return _a; } }
+        public IPoint P2 { get { return _c; } }
+        public IPoint P3 { get { return _d; } }
+        public IPoint P4 { get { return _b; } }
+
         public Bezier(IPoint a, IPoint b, IPoint c, IPoint d) : base(a, b)
         {
             _c = c;
