@@ -86,10 +86,30 @@ namespace LinesAndCurves
 
                 foreach (var curve in curves)
                 {
-                    if (curve is VisualCurve visualCurve)
-                    {
-                        ICurve curveObject = visualCurve.CurveAccessor;
+                    ICurve curveObject = curve.CurveAccessor;
 
+                    if (checkBox1.Checked) // Check if the mirror checkbox is checked
+                    {
+                        // Reflect the curve
+                        IPoint p1, p2, p3, p4;
+                        if (curveObject is Line line)
+                        {
+                            p1 = new Geometry.Point(panel1.Width - line.GetPoint(0).getX(), panel1.Height - line.GetPoint(0).getY());
+                            p2 = new Geometry.Point(panel1.Width - line.GetPoint(1).getX(), panel1.Height - line.GetPoint(1).getY());
+                            WriteLine(writer, p1, p2);
+                        }
+                        else if (curveObject is Bezier bezier)
+                        {
+                            p1 = new Geometry.Point(panel1.Width - bezier.P1.getX(), panel1.Height - bezier.P1.getY());
+                            p2 = new Geometry.Point(panel1.Width - bezier.P2.getX(), panel1.Height - bezier.P2.getY());
+                            p3 = new Geometry.Point(panel1.Width - bezier.P3.getX(), panel1.Height - bezier.P3.getY());
+                            p4 = new Geometry.Point(panel1.Width - bezier.P4.getX(), panel1.Height - bezier.P4.getY());
+                            WriteBezier(writer, p1, p2, p3, p4);
+                        }
+                    }
+                    else
+                    {
+                        // Save the original curve
                         if (curveObject is Line line)
                         {
                             WriteLine(writer, line.GetPoint(0), line.GetPoint(1));
@@ -104,7 +124,7 @@ namespace LinesAndCurves
                 writer.WriteLine("</svg>");
             }
 
-            MessageBox.Show("Lines and Bezier curve saved to SVG file successfully!");
+            MessageBox.Show("Curves have been saved successfully!");
         }
 
         private void WriteSvgHeader(StreamWriter writer, int width, int height)
