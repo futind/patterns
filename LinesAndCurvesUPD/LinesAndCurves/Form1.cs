@@ -88,6 +88,12 @@ namespace LinesAndCurves
                 writer.WriteLine($"<svg width=\"{width}\" height=\"{height}\" version=\"1.1\" ");
                 writer.WriteLine("xmlns=\"http://www.w3.org/2000/svg\">");
 
+                writer.WriteLine("<defs>");
+                writer.WriteLine("  <marker id=\"arrow\" viewBox=\"0 0 5 5\" refX=\"3\" refY=\"3\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto\">");
+                writer.WriteLine("    <path d=\"M 0 0 L 5 3 L 0 5 Z\" fill=\"green\"/>");
+                writer.WriteLine("  </marker>");
+                writer.WriteLine("</defs>");
+
                 // Write the lines and Bezier curve to the SVG file
                 foreach (var curve in curves)
                 {
@@ -102,12 +108,15 @@ namespace LinesAndCurves
                             IPoint p1 = line.GetPoint(0);
                             IPoint p2 = line.GetPoint(1);
 
-                            string x1 = p1.getX().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-                            string y1 = p1.getY().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-                            string x2 = p2.getX().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-                            string y2 = p2.getY().ToString(CultureInfo.CreateSpecificCulture("en-US"));
+                            int x1 = (int)p1.getX();
+                            int y1 = (int)p1.getY();
+                            int x2 = (int)p2.getX();
+                            int y2 = (int)p2.getY();
 
-                            writer.WriteLine($"<line x1=\"{x1}\" y1=\"{y1}\" x2=\"{x2}\" y2=\"{y2}\" stroke=\"green\" stroke-width=\"3\" />");
+
+                            writer.WriteLine($"<ellipse cx=\"{x1}\" cy=\"{y1}\" rx=\"3\" ry=\"3\" stroke=\"green\" stroke-width=\"3\" fill=\"none\" />");
+                            writer.WriteLine($"<line x1=\"{x1}\" y1=\"{y1}\" x2=\"{x2}\" y2=\"{y2}\" style=\"stroke:green;stroke-width:3\" marker-end=\"url(#arrow)\" />"); 
+
                         }
                         else if (curveObject is Bezier)
                         {
@@ -117,16 +126,20 @@ namespace LinesAndCurves
                             IPoint p3 = bezier.P3;
                             IPoint p4 = bezier.P4;
 
-                            string x1 = p1.getX().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-                            string y1 = p1.getY().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-                            string x2 = p2.getX().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-                            string y2 = p2.getY().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-                            string x3 = p3.getX().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-                            string y3 = p3.getY().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-                            string x4 = p4.getX().ToString(CultureInfo.CreateSpecificCulture("en-US"));
-                            string y4 = p4.getY().ToString(CultureInfo.CreateSpecificCulture("en-US"));
+                            double x1 = p1.getX();
+                            double y1 = p1.getY();
+                            double x2 = p2.getX();
+                            double y2 = p2.getY();
+                            double x3 = p3.getX();
+                            double y3 = p3.getY();
+                            double x4 = p4.getX();
+                            double y4 = p4.getY();
 
+
+                            writer.WriteLine($"<rect x=\"{(int)(x1 - 1.5)}\" y=\"{(int)(y1 - 1.5)}\" width=\"5\" height=\"5\" stroke=\"black\" stroke-width=\"2\" fill=\"none\" />");
                             writer.WriteLine($"<path d=\"M{x1} {y1} C {x2} {y2}, {x3} {y3}, {x4} {y4}\" stroke=\"black\" stroke-width=\"3\" stroke-dasharray=\"10 3\" fill=\"none\" />");
+                            writer.WriteLine($"<rect x=\"{(int)(x4 - 1.5)}\" y=\"{(int)(y4 - 1.5)}\" width=\"5\" height=\"5\" stroke=\"black\" stroke-width=\"2\" fill=\"none\" />");
+
                         }
                     }
                 }
