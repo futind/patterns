@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repos\\patterns — копия\\LinesAndCurvesUPD\\LinesAndCurves\\LinesAndCurves.csproj": {}
+    "C:\\repos\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\LinesAndCurves.csproj": {}
   },
   "projects": {
-    "C:\\repos\\patterns — копия\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj": {
+    "C:\\repos\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\patterns — копия\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj",
+        "projectUniqueName": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj",
         "projectName": "Geometry",
-        "projectPath": "C:\\repos\\patterns — копия\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj",
+        "projectPath": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj",
         "packagesPath": "C:\\Users\\Falirchik\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\patterns — копия\\LinesAndCurvesUPD\\Geometry\\obj\\",
+        "outputPath": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Geometry\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Falirchik\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -67,14 +67,14 @@
         }
       }
     },
-    "C:\\repos\\patterns — копия\\LinesAndCurvesUPD\\LinesAndCurves\\LinesAndCurves.csproj": {
+    "C:\\repos\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\LinesAndCurves.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\patterns — копия\\LinesAndCurvesUPD\\LinesAndCurves\\LinesAndCurves.csproj",
+        "projectUniqueName": "C:\\repos\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\LinesAndCurves.csproj",
         "projectName": "LinesAndCurves",
-        "projectPath": "C:\\repos\\patterns — копия\\LinesAndCurvesUPD\\LinesAndCurves\\LinesAndCurves.csproj",
+        "projectPath": "C:\\repos\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\LinesAndCurves.csproj",
         "packagesPath": "C:\\Users\\Falirchik\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\patterns — копия\\LinesAndCurvesUPD\\LinesAndCurves\\obj\\",
+        "outputPath": "C:\\repos\\patterns\\LinesAndCurvesUPD\\LinesAndCurves\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Falirchik\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -91,11 +91,11 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\repos\\patterns — копия\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj": {
-                "projectPath": "C:\\repos\\patterns — копия\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj"
+              "C:\\repos\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj": {
+                "projectPath": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj"
               },
-              "C:\\repos\\patterns — копия\\LinesAndCurvesUPD\\Visual\\Visual.csproj": {
-                "projectPath": "C:\\repos\\patterns — копия\\LinesAndCurvesUPD\\Visual\\Visual.csproj"
+              "C:\\repos\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.csproj": {
+                "projectPath": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.csproj"
               }
             }
           }
@@ -137,14 +137,14 @@
         }
       }
     },
-    "C:\\repos\\patterns — копия\\LinesAndCurvesUPD\\Visual\\Visual.csproj": {
+    "C:\\repos\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\patterns — копия\\LinesAndCurvesUPD\\Visual\\Visual.csproj",
+        "projectUniqueName": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.csproj",
         "projectName": "Visual",
-        "projectPath": "C:\\repos\\patterns — копия\\LinesAndCurvesUPD\\Visual\\Visual.csproj",
+        "projectPath": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.csproj",
         "packagesPath": "C:\\Users\\Falirchik\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\patterns — копия\\LinesAndCurvesUPD\\Visual\\obj\\",
+        "outputPath": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Visual\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Falirchik\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -161,8 +161,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\repos\\patterns — копия\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj": {
-                "projectPath": "C:\\repos\\patterns — копия\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj"
+              "C:\\repos\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj": {
+                "projectPath": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Geometry\\Geometry.csproj"
               }
             }
           }
