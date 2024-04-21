@@ -147,9 +147,16 @@ namespace Visual
 
     public class VisualCurve : IDrawable, ICurve
     {
+        protected ICurve curve;
+
         public VisualCurve(ICurve C)
         {
             curve = C;
+        }
+
+        public ICurve CurveAccessor
+        {
+            get { return curve; }
         }
 
         public void Draw(IDrawer d, bool isMirror)
@@ -161,7 +168,5 @@ namespace Visual
         {
             return curve.GetPoint(t);
         }
-
-        protected ICurve curve;
     }
 }
