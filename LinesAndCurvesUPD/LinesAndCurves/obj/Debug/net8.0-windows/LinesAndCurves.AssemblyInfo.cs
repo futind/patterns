@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LinesAndCurves")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be2af1d6ac57a5842e428ab0a7e106a4221417ed")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3424485dfa14f40596325602c8c9f0cae32f518b")]
 [assembly: System.Reflection.AssemblyProductAttribute("LinesAndCurves")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LinesAndCurves")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

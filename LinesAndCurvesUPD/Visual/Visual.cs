@@ -12,6 +12,43 @@ namespace Visual
         public void DrawSegment(ICurve C, IPoint A, IPoint B, bool isMirror);
     }
 
+
+    
+    public class Mirror : IDrawer
+    {
+        IDrawer d;
+        ICurve mc = new MirrorCurve();
+
+        public void DrawCurve(ICurve C, bool isMirror)
+        {
+            mc.c = C;
+            d.DrawCurve(mc, isMirror);
+
+            throw new NotImplementedException();
+        }
+
+        public void DrawPoint(IPoint C, bool isMirror)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DrawSegment(ICurve C, IPoint A, IPoint B, bool isMirror)
+        {
+            throw new NotImplementedException();
+        }
+        private class MirrorCurve : ICurve
+        {
+            public ICurve c { get; set; }
+            public IPoint GetPoint(double t)
+            {
+                IPoint p = c.GetPoint(t);
+
+                throw new NotImplementedException();
+            }
+        }
+
+    }
+
     public class BlackDrawer : IDrawer
     {
         
@@ -23,10 +60,10 @@ namespace Visual
             g = G;
         }
 
-        public void DrawPoint(IPoint p)
-        {
-            DrawPoint(p, false); // call the modified method with isMirror = false
-        }
+        //public void DrawPoint(IPoint p)
+        //{
+        //    DrawPoint(p, false); // call the modified method with isMirror = false
+        //}
         public void DrawPoint(IPoint p, bool isMirror)
         {
             if (isMirror)
@@ -39,10 +76,10 @@ namespace Visual
             g.DrawRectangle(customPen, (int)(p.getX() - 2.5), (int)(p.getY() + 2.5), 5, 5);
         }
 
-        public void DrawSegment(ICurve C, IPoint A, IPoint B)
-        {
-            DrawSegment(C, A, B, false); // call the modified method with isMirror = false
-        }
+        //public void DrawSegment(ICurve C, IPoint A, IPoint B)
+        //{
+        //    DrawSegment(C, A, B, false); // call the modified method with isMirror = false
+        //}
         public void DrawSegment(ICurve C, IPoint A, IPoint B, bool isMirror)
         {
             if (isMirror)
@@ -54,10 +91,10 @@ namespace Visual
             g.DrawLine(customPen, (int)A.getX(), (int)A.getY(), (int)B.getX(), (int)B.getY());
         }
 
-        public void DrawCurve(ICurve C)
-        {
-            DrawCurve(C, false); // call the modified method with isMirror = false
-        }
+        //public void DrawCurve(ICurve C)
+        //{
+        //    DrawCurve(C, false); // call the modified method with isMirror = false
+        //}
         public void DrawCurve(ICurve C, bool isMirror)
         {
             int n = 10;
@@ -98,10 +135,10 @@ namespace Visual
             g.DrawEllipse(customPen, (int)p.getX(), (int)p.getY(), 5, 5);
         }
 
-        public void DrawSegment(ICurve C, IPoint A, IPoint B)
-        {
-            DrawSegment(C, A, B, false); // call the modified method with isMirror = false
-        }
+        //public void DrawSegment(ICurve C, IPoint A, IPoint B)
+        //{
+        //    DrawSegment(C, A, B, false); // call the modified method with isMirror = false
+        //}
 
         public void DrawSegment(ICurve C, IPoint A, IPoint B, bool isMirror)
         {
@@ -114,10 +151,10 @@ namespace Visual
             g.DrawLine(customPen, (int)A.getX(), (int)A.getY(), (int)B.getX(), (int)B.getY());
         }
 
-        public void DrawCurve(ICurve C)
-        {
-            DrawCurve(C, false); // call the modified method with isMirror = false
-        }
+        //public void DrawCurve(ICurve C)
+        //{
+        //    DrawCurve(C, false); // call the modified method with isMirror = false
+        //}
         public void DrawCurve(ICurve C, bool isMirror)
         {
 
