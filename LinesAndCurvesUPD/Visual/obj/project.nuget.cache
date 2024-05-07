@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wM2SvU9e5PVBCK8s21yV4/a4OWu+0Dw7JkepNucDGKfcJ4qn/rk6heLf1dMp/GZFltumJICeWuqqWB3f9pfxpw==",
+  "dgSpecHash": "TiGf7k5FDutzUpknrWtCAW+uRi6K1s2Z3UuYBq1DjFfelONv76zHNcWesdH8tGSqtzaUd+9nVLDKkqZOkRfbDA==",
   "success": true,
-  "projectFilePath": "C:\\repos\\patterns\\LinesAndCurvesUPD\\Visual\\Visual.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Falirchik\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
-    "C:\\Users\\Falirchik\\.nuget\\packages\\system.drawing.common\\8.0.3\\system.drawing.common.8.0.3.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\frostled\\Desktop\\BridgeNewTry\\LinesAndCurves\\Visual\\Visual.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

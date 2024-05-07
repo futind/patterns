@@ -1,52 +1,123 @@
 using Geometry;
-using System.Windows.Media.Imaging;
+using System.Diagnostics.Eventing.Reader;
 using Visual;
 
 namespace LinesAndCurves
 {
-    public partial class Main_Form : Form
+    public partial class Form1 : Form
     {
-        public Main_Form()
+        public Form1()
         {
             InitializeComponent();
+            ListOfCurves = new List<AVisualCurve>();
         }
 
-        private void Main_Form_Generate_Button_Clicked(object sender, EventArgs e)
+        private void HReflection_checkbox_CheckedChanged(object sender, EventArgs e)
         {
             panel1.Refresh();
         }
 
-        private void Save_Button_Clicked(object sender, EventArgs e)
+        private void VReflection_checkbox_CheckedChanged(object sender, EventArgs e)
         {
+            panel1.Refresh();
+        }
 
+        private void Generate_button_Click(object sender, EventArgs e)
+        {
+            ListOfCurves.Clear();
+            Random rnd = new Random();
+            IPoint a = new Geometry.Point((float)rnd.Next(50, 600), (float)rnd.Next(50, 400));
+            IPoint b = new Geometry.Point((float)rnd.Next(50, 600), (float)rnd.Next(50, 400));
+            IPoint c = new Geometry.Point((float)rnd.Next(50, 600), (float)rnd.Next(50, 400));
+            IPoint d = new Geometry.Point((float)rnd.Next(50, 600), (float)rnd.Next(50, 400));
+
+            AVisualCurve L = new AVisualCurve(new Line(a, b));
+            AVisualCurve B = new AVisualCurve(new Bezier(a, b, c, d));
+            AVisualCurve mfB = new AVisualCurve(new MoveTo(new Fragment(B, 0.66, 0.33), new Geometry.Point(300, 300)));
+
+            ListOfCurves.Add(L);
+            ListOfCurves.Add(B);
+            ListOfCurves.Add(mfB);
+            panel1.Refresh();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.DrawRectangle(Pens.Red, 0, 0, 5, 5);
-            e.Graphics.DrawRectangle(Pens.Green, 10, 10, 5, 5);
-            e.Graphics.DrawRectangle(Pens.Blue, -10, -10, 5, 5);
-            e.Graphics.DrawRectangle(Pens.Yellow, -10, 10, 5, 5);
-            e.Graphics.DrawRectangle(Pens.Purple, 10, -10, 5, 5);
+            if (ListOfCurves.Count == 0)
+            {
+                return;
+            }
 
-            Random rnd = new Random();
-            IPoint a = new Geometry.Point((float)rnd.Next(200, 500), (float)rnd.Next(100, 300));
-            IPoint b = new Geometry.Point((float)rnd.Next(200, 500), (float)rnd.Next(100, 300));
-            IPoint c = new Geometry.Point((float)rnd.Next(200, 500), (float)rnd.Next(100, 300));
-            IPoint d = new Geometry.Point((float)rnd.Next(200, 500), (float)rnd.Next(100, 300));
+            if (VReflection_checkbox.Checked & HReflection_checkbox.Checked)
+            {
+                black = new VerticalReflection(new HorizontalReflection(new BlackDrawer(e.Graphics), panel1.Width), panel1.Height);
+                green = new VerticalReflection(new HorizontalReflection(new GreenDrawer(e.Graphics), panel1.Width), panel1.Height);
+            }
+            else if (VReflection_checkbox.Checked)
+            {
+                black = new VerticalReflection(new BlackDrawer(e.Graphics), panel1.Height);
+                green = new VerticalReflection(new GreenDrawer(e.Graphics), panel1.Height);
+            }
+            else if (HReflection_checkbox.Checked)
+            {
+                black = new HorizontalReflection(new BlackDrawer(e.Graphics), panel1.Width);
+                green = new HorizontalReflection(new GreenDrawer(e.Graphics), panel1.Width);
+            }
+            else
+            {
+                black = new BlackDrawer(e.Graphics);
+                green = new GreenDrawer(e.Graphics);
+            }
 
-            VisualCurve L = new VisualCurve(new Line(a, b));
-            VisualCurve B = new VisualCurve(new Bezier(a, b, c, d));
+            ListOfCurves[0].Draw(black);
+            ListOfCurves[1].Draw(green);
+            ListOfCurves[2].Draw(black);
 
-            IDrawer black = new BlackDrawer(e.Graphics);
-            IDrawer green = new GreenDrawer(e.Graphics);
-            IDrawer chiralgreen = new ChiralDrawer(green, this.Width, this.Height);
-            IDrawer chiralblack = new ChiralDrawer(black, this.Width, this.Height);
-
-            //L.Draw(green);
-            //L.Draw(chiralgreen);
-            //B.Draw(black);
-            B.Draw(chiralblack);
         }
+
+        private void WriteSvgHeader(StreamWriter writer, int width, int height)
+        {
+            writer.WriteLine("<?xml version=\"1.0\" standalone=\"no\"?>");
+            writer.WriteLine("<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" ");
+            writer.WriteLine("\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">");
+            writer.WriteLine($"<svg width=\"{width}\" height=\"{height}\" version=\"1.1\" ");
+            writer.WriteLine("xmlns=\"http://www.w3.org/2000/svg\">");
+        }
+
+        private void WriteMarkerDefinition(StreamWriter writer)
+        {
+            writer.WriteLine("<defs>");
+            writer.WriteLine("  <marker id=\"arrow\" viewBox=\"0 0 5 5\" refX=\"3\" refY=\"3\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto\">");
+            writer.WriteLine("    <path d=\"M 0 0 L 5 3 L 0 5 Z\" fill=\"green\"/>");
+            writer.WriteLine("  </marker>");
+            writer.WriteLine("</defs>");
+        }
+        
+        private void Save_button_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "SVG files (*.svg)|*.svg";
+            saveFileDialog.Title = "Save SVG File";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = saveFileDialog.FileName;
+
+                using (StreamWriter writer = new StreamWriter(filePath))
+                {
+                    WriteSvgHeader(writer, panel1.Width, panel1.Height);
+                    WriteMarkerDefinition(writer);
+
+                    ListOfCurves[0].DrawSVG(black, writer);
+                    ListOfCurves[1].DrawSVG(green, writer);
+                    ListOfCurves[2].DrawSVG(black, writer);
+                    writer.WriteLine("</svg>");
+                    MessageBox.Show("Curves have been saved successfully!");
+                }
+            }
+        }
+
+        IDrawer black, green;
+        private List<AVisualCurve> ListOfCurves;
     }
 }

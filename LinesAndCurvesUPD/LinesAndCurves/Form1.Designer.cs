@@ -1,6 +1,6 @@
 ﻿namespace LinesAndCurves
 {
-    partial class Main_Form
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,112 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Generate_button = new Button();
-            Save_button = new Button();
-            tabControl1 = new TabControl();
-            tabPage1 = new TabPage();
             panel1 = new Panel();
-            tabPage2 = new TabPage();
-            panel2 = new Panel();
-            tabControl1.SuspendLayout();
-            tabPage1.SuspendLayout();
-            tabPage2.SuspendLayout();
+            Generate_button = new Button();
+            HReflection_checkbox = new CheckBox();
+            VReflection_checkbox = new CheckBox();
+            Flip_checkbox = new CheckBox();
+            Save_button = new Button();
             SuspendLayout();
-            // 
-            // Generate_button
-            // 
-            Generate_button.Location = new Point(12, 12);
-            Generate_button.Name = "Generate_button";
-            Generate_button.Size = new Size(114, 33);
-            Generate_button.TabIndex = 0;
-            Generate_button.Text = "Generate Curves";
-            Generate_button.UseVisualStyleBackColor = true;
-            Generate_button.Click += Main_Form_Generate_Button_Clicked;
-            // 
-            // Save_button
-            // 
-            Save_button.Location = new Point(132, 12);
-            Save_button.Name = "Save_button";
-            Save_button.Size = new Size(114, 33);
-            Save_button.TabIndex = 1;
-            Save_button.Text = "Save as SVG";
-            Save_button.UseVisualStyleBackColor = true;
-            Save_button.Click += Save_Button_Clicked;
-            // 
-            // tabControl1
-            // 
-            tabControl1.Controls.Add(tabPage1);
-            tabControl1.Controls.Add(tabPage2);
-            tabControl1.Location = new Point(12, 51);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1043, 596);
-            tabControl1.TabIndex = 2;
-            // 
-            // tabPage1
-            // 
-            tabPage1.Controls.Add(panel1);
-            tabPage1.Location = new Point(4, 24);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1035, 568);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "tabPage1";
-            tabPage1.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
-            panel1.Location = new Point(6, 6);
+            panel1.Location = new Point(154, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1029, 562);
+            panel1.Size = new Size(665, 446);
             panel1.TabIndex = 0;
-            panel1.Click += panel1_Click;
             panel1.Paint += panel1_Paint;
             // 
-            // tabPage2
+            // Generate_button
             // 
-            tabPage2.Controls.Add(panel2);
-            tabPage2.Location = new Point(4, 24);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1035, 568);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPage2";
-            tabPage2.UseVisualStyleBackColor = true;
+            Generate_button.Location = new Point(12, 21);
+            Generate_button.Name = "Generate_button";
+            Generate_button.Size = new Size(129, 36);
+            Generate_button.TabIndex = 1;
+            Generate_button.Text = "Generate curves";
+            Generate_button.UseVisualStyleBackColor = true;
+            Generate_button.Click += Generate_button_Click;
             // 
-            // panel2
+            // HReflection_checkbox
             // 
-            panel2.Location = new Point(6, 7);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(800, 400);
-            panel2.TabIndex = 1;
+            HReflection_checkbox.AutoSize = true;
+            HReflection_checkbox.Location = new Point(12, 63);
+            HReflection_checkbox.Name = "HReflection_checkbox";
+            HReflection_checkbox.Size = new Size(129, 19);
+            HReflection_checkbox.TabIndex = 2;
+            HReflection_checkbox.Text = "Reflect Horizontally";
+            HReflection_checkbox.UseVisualStyleBackColor = true;
+            HReflection_checkbox.CheckedChanged += HReflection_checkbox_CheckedChanged;
             // 
-            // Main_Form
+            // VReflection_checkbox
+            // 
+            VReflection_checkbox.AutoSize = true;
+            VReflection_checkbox.Location = new Point(12, 88);
+            VReflection_checkbox.Name = "VReflection_checkbox";
+            VReflection_checkbox.Size = new Size(112, 19);
+            VReflection_checkbox.TabIndex = 3;
+            VReflection_checkbox.Text = "Reflect Vertically";
+            VReflection_checkbox.UseVisualStyleBackColor = true;
+            VReflection_checkbox.CheckedChanged += VReflection_checkbox_CheckedChanged;
+            // 
+            // Flip_checkbox
+            // 
+            Flip_checkbox.AutoSize = true;
+            Flip_checkbox.Location = new Point(12, 113);
+            Flip_checkbox.Name = "Flip_checkbox";
+            Flip_checkbox.Size = new Size(45, 19);
+            Flip_checkbox.TabIndex = 4;
+            Flip_checkbox.Text = "Flip";
+            Flip_checkbox.UseVisualStyleBackColor = true;
+            // 
+            // Save_button
+            // 
+            Save_button.Location = new Point(12, 142);
+            Save_button.Name = "Save_button";
+            Save_button.Size = new Size(129, 42);
+            Save_button.TabIndex = 5;
+            Save_button.Text = "Save to SVG";
+            Save_button.UseVisualStyleBackColor = true;
+            Save_button.Click += Save_button_Click;
+            // 
+            // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1079, 697);
-            Controls.Add(tabControl1);
+            ClientSize = new Size(831, 470);
             Controls.Add(Save_button);
+            Controls.Add(Flip_checkbox);
+            Controls.Add(VReflection_checkbox);
+            Controls.Add(HReflection_checkbox);
             Controls.Add(Generate_button);
-            Name = "Main_Form";
-            Text = "Main_Form";
-            Paint += Main_Form_Paint;
-            MouseDown += Main_Form_Mouse_Down;
-            tabControl1.ResumeLayout(false);
-            tabPage1.ResumeLayout(false);
-            tabPage2.ResumeLayout(false);
+            Controls.Add(panel1);
+            Name = "Form1";
+            Text = "Form1";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Button Generate_button;
-        private Button Save_button;
-        private TabControl tabControl1;
-        private TabPage tabPage1;
         private Panel panel1;
-        private TabPage tabPage2;
-        private Panel panel2;
+        private Button Generate_button;
+        private CheckBox HReflection_checkbox;
+        private CheckBox VReflection_checkbox;
+        private CheckBox Flip_checkbox;
+        private Button Save_button;
     }
 }
