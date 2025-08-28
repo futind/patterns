@@ -209,33 +209,5 @@ namespace Visual
         protected ICurve _c;
     }
 
-    //public class VisualLine : AVisualCurve
-    //{
-    //    public VisualLine(Line l) : base(l) { }
-    //    public override void Draw(IDrawer d)
-    //    {
-    //        d.DrawPoint(_c.GetPoint(0));
-    //        int n = 10;
-    //        for (int i = 0; i < n; ++i)
-    //        {
-    //            d.DrawLine(_c.GetPoint(i / (double)n), _c.GetPoint((i + 1) / (double)n), i == n - 1);
-    //        }
-    //    }
-    //}
-
-    //public class VisualBezier : AVisualCurve
-    //{
-    //    public VisualBezier(Bezier b) : base(b) { }
-    //    public override void Draw(IDrawer d)
-    //    {
-    //        d.DrawPoint(_c.GetPoint(0));
-    //        int n = 10;
-    //        for (int i = 0; i < n; ++i)
-    //        {
-    //            d.DrawLine(_c.GetPoint(i / (double)n), _c.GetPoint((i + 1) / (double)n), i == n - 1);
-    //        }
-    //    }
-    //}
-
 
 }

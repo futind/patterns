@@ -1,0 +1,10 @@
+C:\Users\Falirchik\source\repos\TEST\TEST\bin\Debug\TEST.exe.config
+C:\Users\Falirchik\source\repos\TEST\TEST\bin\Debug\TEST.exe
+C:\Users\Falirchik\source\repos\TEST\TEST\bin\Debug\TEST.pdb
+C:\Users\Falirchik\source\repos\TEST\TEST\obj\Debug\TEST.csproj.AssemblyReference.cache
+C:\Users\Falirchik\source\repos\TEST\TEST\obj\Debug\TEST.Form1.resources
+C:\Users\Falirchik\source\repos\TEST\TEST\obj\Debug\TEST.Properties.Resources.resources
+C:\Users\Falirchik\source\repos\TEST\TEST\obj\Debug\TEST.csproj.GenerateResource.cache
+C:\Users\Falirchik\source\repos\TEST\TEST\obj\Debug\TEST.csproj.CoreCompileInputs.cache
+C:\Users\Falirchik\source\repos\TEST\TEST\obj\Debug\TEST.exe
+C:\Users\Falirchik\source\repos\TEST\TEST\obj\Debug\TEST.pdb

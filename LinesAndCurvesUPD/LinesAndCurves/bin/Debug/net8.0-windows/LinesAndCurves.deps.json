@@ -17,7 +17,10 @@
       },
       "Geometry/1.0.0": {
         "runtime": {
-          "Geometry.dll": {}
+          "Geometry.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Visual/1.0.0": {
@@ -25,7 +28,10 @@
           "Geometry": "1.0.0"
         },
         "runtime": {
-          "Visual.dll": {}
+          "Visual.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
